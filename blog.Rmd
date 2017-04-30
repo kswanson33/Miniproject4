@@ -6,3 +6,11 @@ output: html_document
 ---
 
 ```{r}
+library(tidyverse)
+library(macleish)
+```
+
+```{r}
+names(macleish_layers)
+```
+
