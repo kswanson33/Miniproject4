@@ -18,22 +18,38 @@ names(macleish_layers)
 ```
 
 ```{r}
-url <- "http://wsgw.mass.gov/data/gispub/shape/state/biketrails_arc.zip"
-download.file(url, destfile = basename(url))
-unzip("biketrails_arc.zip", exdir = "biketrails")
-```
-```{r}
-url2 <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/dcrtrails.html"
-
-download.file(url2, destfile = basename(url2))
+url1 <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/dcrtrails.html"
+download.file(url1, destfile = basename(url1))
+unzip("dcrtrails.zip", exdir = "dcrtrails")
 ```
 
 ```{r}
-unzip("dcrtrails.zip", exdir = "Dcrtrails")
+trails <- path.expand("dcrtrails")
+list.files(trails)
 ```
+
+```{r}
+ogrListLayers(trails)
+```
+
+```{r}
+ogrInfo(trails, layer = "DCR_ROADS_TRAILS_ARC")
+```
+
+```{r}
+dcr_trails <- readOGR(trails, "DCR_ROADS_TRAILS_ARC")
+summary(dcr_trails)
+```
+
 ```{r}
 unzip("colleges.zip", exdir = "colleges")
 ```
+
 ```{r}
 unzip("contours250k.zip", exdir = "Contours")
 ```
+
+```{r}
+
+```
+
