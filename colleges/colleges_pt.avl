@@ -1,0 +1,176 @@
+/3.2
+(ODB.1
+	FirstRootClassName:	"Legend"
+	Roots:	2
+	Version:	32
+)
+
+(Legend.2
+	LegType:	0x08
+	ClassType:	0x03
+	FieldNames:	3
+	Symbols:	4
+	Class:	26
+	Class:	27
+	Class:	28
+	StdDevs:	1.00000000000000
+	NullSym:	19
+	NullValues:	29
+	StatValues:	30
+	Precision:	-3
+)
+
+(AVStr.3
+	S:	"Type"
+)
+
+(SymList.4
+	Child:	5
+	Child:	12
+	Child:	19
+)
+
+(BMkSym.5
+	Color:	6
+	BgColor:	7
+	Font:	8
+	Size:	16.00000000000000
+	Pattern:	59
+	Angle:	360.00000000000000
+)
+
+(TClr.6
+	Red:	0x211
+	Green:	0xaeff
+	Blue:	0xae
+)
+
+(TClr.7
+	Name:	"Transparent"
+)
+
+(NFont.8
+	Family:	9
+	Name:	10
+	Style:	11
+	Weight:	1
+	Wideness:	1
+)
+
+(AVStr.9
+	S:	"ESRI Cartography"
+)
+
+(AVStr.10
+	S:	"ESRI Cartography"
+)
+
+(AVStr.11
+	S:	"Normal"
+)
+
+(BMkSym.12
+	Color:	13
+	BgColor:	14
+	Font:	15
+	Size:	16.00000000000000
+	Pattern:	59
+	Angle:	360.00000000000000
+)
+
+(TClr.13
+	Red:	0xc2ff
+	Green:	0xc2
+	Blue:	0xc2
+)
+
+(TClr.14
+	Name:	"Transparent"
+)
+
+(NFont.15
+	Family:	16
+	Name:	17
+	Style:	18
+	Weight:	1
+	Wideness:	1
+)
+
+(AVStr.16
+	S:	"ESRI Cartography"
+)
+
+(AVStr.17
+	S:	"ESRI Cartography"
+)
+
+(AVStr.18
+	S:	"Normal"
+)
+
+(BMkSym.19
+	Color:	20
+	BgColor:	21
+	Font:	22
+	Size:	8.00000000000000
+	Pattern:	35
+	Angle:	360.00000000000000
+)
+
+(TClr.20
+	Name:	"Transparent"
+)
+
+(TClr.21
+	Name:	"Transparent"
+)
+
+(NFont.22
+	Family:	23
+	Name:	24
+	Style:	25
+	Weight:	1
+	Wideness:	1
+)
+
+(AVStr.23
+	S:	"ESRI Geometric Symbols"
+)
+
+(AVStr.24
+	S:	"ESRI Geometric Symbols"
+)
+
+(AVStr.25
+	S:	"Normal"
+)
+
+(LClass.26
+	IsText:	1
+	Label:	"Private"
+	MinStr:	"PRI"
+	MaxStr:	"PRI"
+	Precision:	-3
+)
+
+(LClass.27
+	IsText:	1
+	Label:	"Public"
+	MinStr:	"PUB"
+	MaxStr:	"PUB"
+	Precision:	-3
+)
+
+(LClass.28
+	IsNoData:	1
+	IsText:	1
+	Label:	"No Data"
+	Precision:	-3
+)
+
+(NameDict.29
+)
+
+(NameDict.30
+)
+

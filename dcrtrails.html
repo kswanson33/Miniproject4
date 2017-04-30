@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="adaptive no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="adaptive no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="adaptive no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="adaptive no-js" lang="en"> <!--<![endif]-->
+	<head profile="http://dublincore.org">
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Language" content="en-US" />
+		<meta name="robots" content="                            index, follow                " />		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width" />
+	
+<title>MassGIS Data - DCR Roads and Trails
+</title>
+		<meta name="description" content="The linework in this layer representsroads and trails on DCR park lands (outside of the urban parks area)" />
+    		<meta name="publisher" content="Executive Office for Administration and Finance" />
+	
+<meta name="DC.date" scheme="W3CDTF" content="2012-03-27" />  
+
+<meta name="author" content="itd"/>        
+	            
+    		    		    		    		                        		            		    	                        		    	    		    <!-- Twitter Card data -->
+    	<meta name="twitter:card" content="summary" />
+    	<meta name="twitter:title" content="                            MassGIS Data - DCR Roads and Trails                " />
+    	<meta name="twitter:description" content="                            The linework in this layer representsroads and trails on DCR park lands (outside of the urban parks area)                " />
+
+    <!-- Open Graph data --> 
+    	<meta property="og:title" content="                            MassGIS Data - DCR Roads and Trails                " />
+    	<meta property="og:type" content="website" />
+    	<meta property="og:url" content="http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/dcrtrails.html" />
+    	<meta property="og:image" content="http://www.mass.gov/resources/images/template/social_media_global_image.png" />
+        <meta property="og:description" content="                            The linework in this layer representsroads and trails on DCR park lands (outside of the urban parks area)                " />
+        <meta property="og:site_name" content="Administration and Finance" />
+		<meta name="contentID" content="2058934"	/>
+		<meta content="Percussion CM System" name="generator"/>
+<meta name="perc_linkback" id="perc_linkback" content="FmdlYG1sZmF4B214AWBgYngGZmBleBNkbWxkbW1k"/>	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+	<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+		<link rel="stylesheet" href="/resources/styles/main.css" />
+		<link rel="stylesheet" href="/resources/styles/site/anf.css" />
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="/resources/styles/font-awesome-ie7.css">
+	<![endif]-->		
+		<script src="/resources/scripts/vendor/jquery.js"></script>
+		<script src="/resources/scripts/vendor/modernizr-2.6.1.min.js"></script>
+		<!--[if gte IE 9]>
+          <style>
+            #topnav {
+               filter: none;
+            }
+          </style>
+		<![endif]-->
+	<script type="text/javascript" src="/resources/foresee/foresee-trigger.js"></script>
+	<script type="text/javascript">
+    // ga tracking
+    // 20140516JC changed format to account based pushes
+    // 20150722JC removed baynote ga custom var
+    // initiate google analytics queue
+    	var _gaq = _gaq || [];
+        
+	// get author meta infomation
+    	var metaAuthor = $("meta[name*='author']").attr("content"),
+		theAuthor = (metaAuthor) ? metaAuthor : 'AUTHOR NOT SET';
+
+ 	// site tracking code
+		_gaq.push(
+          ['_setAccount', 'UA-16345074-1'],
+          ['_setCustomVar', 1, 'Content Author', theAuthor, 3],
+          ['_trackPageview']
+		);
+
+	// global tracking code
+		_gaq.push(
+		  ['b._setAccount', 'UA-12471675-2'],
+		  ['b._setCustomVar', 1, 'Content Author', theAuthor, 3],
+		  ['b._setDomainName', 'mass.gov'],
+		  ['b._trackPageview']		  
+		);
+	
+
+	
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+	</head>
+	<body class="anf">
+		<a id="top"></a>
+			<!-- alert content here -->			<!-- site alert start -->
+<!-- site alert end --><div class="outer-container">
+	<div class="row top-line">
+		<div class="col col6">
+				  <a href="/" id="logo"><img src="/resources/images/template/massgovlogo.png" alt="Go to Mass.gov home."></a>
+				  <ul class="rwd-ulhorizontal">
+			<li><a href="/portal/global-agency-list.html">State Offices &amp; Courts</a></li>
+            <li><a href="/portal/global-a-z-list.html">State A-Z Topics</a></li>
+			<li class="last"><a href="/portal/global-forms-list.html">State Forms</a></li>
+		  </ul><!-- .rwd-ulhorizontal -->
+		</div><!-- .col .col5 -->
+		<div class="col col2 alert-wrap">
+			<!-- alert content here -->	
+    
+<p class="alert">
+<img class="icon" src="/resources/images/template/alert-icon.png" alt="" />
+<a href="/alert/alertlanding.html">No Active Alerts</a>
+</p>			</div><!-- .col .col3 .alert-wrap -->
+				<div class="col col4 skip-links">
+          <ul class="rwd-ulhorizontal">
+             <li class="skip-to-main"><a href="#maincontent" tabindex="2">Skip to main content</a></li>
+             <li class="resizing-text"><a href="/portal/font-resize-help.html" title="Need help resizing text?">
+              <span class="accessibility">Resize text</span><span aria-hidden="true" class="little-a">A</span> <span aria-hidden="true" class="big-a">A</span></a></li>
+             <li class="translate-widget last"> 
+                <form class="translate" id="ms-translate" method="get" action="/portal/translatedisclaimer.html" onSubmit="return checkForm(this);">              
+                   <label for="to-language" class="accessibility">Translate this page to: </label>
+                   <select name="to" id="to-language">                  
+                      <option value="en" selected="" disabled="">English</option>
+                      <option value="ar">العربية</option>
+                      <option value="bg">български</option>
+                      <option value="ca">Català</option>
+                      <option value="zh-chs">中文</option>
+                      <option value="zh-cht">繁體中文</option>
+                      <option value="cs">Čeština</option>
+                      <option value="da">Dansk</option>
+                      <option value="nl">Nederlands</option>          
+                      <option value="et">Eesti</option>
+                      <option value="fi">Suomi</option>
+                      <option value="fr">Français</option>
+                      <option value="de">Deutsch</option>
+                      <option value="el">Ελληνικά</option>
+                      <option value="ht">Kreyòl Ayisyen</option>
+                      <option value="he">עברית</option>
+                      <option value="hi">हिन्दी</option>
+                      <option value="mww">Hmong Daw</option>
+                      <option value="hu">Magyar</option>
+                      <option value="id">Indonesia</option>
+                      <option value="it">Italiano</option>
+                      <option value="ja">日本語</option>
+                      <option value="ko">한글</option>
+                      <option value="lv">Latviešu</option>
+                      <option value="lt">Lietuvių</option>
+                      <option value="ms">Melayu</option>
+                      <option value="no">Norsk</option>
+                      <option value="fa">فارسی</option>
+                      <option value="pl">Polski</option>
+                      <option value="pt">Português</option>
+                      <option value="ro">Română</option>
+                      <option value="ru">Русский</option>
+                      <option value="sk">Slovenčina</option>
+                      <option value="sl">Slovenščina</option>
+                      <option value="es">Español</option>
+                      <option value="sv">Svensk</option>
+                      <option value="th">ภาษาไทย</option>
+                      <option value="tr">Türkçe</option>
+                      <option value="uk">Українська</option>
+                      <option value="ur">ہندوستانی</option>
+                      <option value="vi">Tiếng Việt</option>
+                   </select>
+                   <input type="hidden" id="translate-url" name="a" value="" />
+                   
+                   &nbsp;<button type="submit" id="translate-go" form="ms-translate" formaction="/portal/translatedisclaimer.html" formmethod="get" title="Translate this page" >Translate this Page</button>             
+                </form>
+                <a href="/portal/no-translate.html" class="translate-disabled">Translation Disabled</a>
+            </li>           
+          </ul><!-- .rwd-ulhorizontal -->
+		</div><!-- .col .col4 .skip-links -->
+	</div><!-- .row .top-line -->
+			<div class="container">
+				<div class="row posrel">
+					<div class="col col6">
+						<div id="tagline">The Official Website of the Executive Office for Administration and Finance</div><!-- #tagline -->
+						<img id="seal" alt="" src="/resources/images/template/header-seal.gif" />
+						<div id="sitetitle">
+						        					<a href="/anf">Administration and Finance</a>
+    											</div><!-- #sitetitle -->
+					</div><!-- .col .col6 .posrel -->
+		    			  <div class="col col6">
+    				<form class="search has-option" method="get" action="/anf/searchresults.html" role="search">
+    				<input type="hidden" name="output" value="xml_no_dtd" />
+    				  <input type="hidden" name="client" value="mg_anf" />
+    				  <input type="hidden" name="proxystylesheet" value="massgov" />
+    				  <input type="hidden" name="getfields" value="*" />
+    				  <input type="hidden" name="ie" value="UTF-8" />
+    				  <input type="hidden" name="oe" value="UTF-8" />
+    				  <input type="hidden" name="tlen" value="215" />
+    				  <input type="hidden" id="sitefolder" name="sitefolder" value="anf" />
+    				  <input type="hidden" name="filter" value="0" />
+<script>
+
+    jQuery(document).ready(function($){ // suggested change - no conflict
+    // remove class and disabled attribute to dipaly options with only meta data
+      $('select#search_scope option').removeClass('hide');
+      $('select#search_scope option').removeAttr('disabled');
+    // replace collections for meta data
+      $('option.js_collection').val('default_collection');
+    // place meta data to the requiredfields field
+      var screen_meta;
+      $('select#search_scope').change(function() {
+        if($('#search_scope option:selected').attr('data-author')) {
+        /** add author data to the search URL hidden inputs  */
+          screen_meta = $('#search_scope option:selected').attr('data-author');
+        } else { /** clear the filter if no data-author */
+          screen_meta = "";
+        };
+        $('input#requiredfields').val(screen_meta);
+      });
+    });
+
+</script>
+    				  <input type="hidden" id="requiredfields" name="requiredfields" value="" />
+    				    				  <input type="hidden" name="startsite" value="EOANFx" />
+    				<label class="accessibility" for="searchinput">Input Search Query</label>
+    				<input type="text" title="Search..." id="searchinput" name="q" class="hint" />
+    				  <label for="search_scope" class="accessibility">Select an Area to Search</label>
+    				  <select name="site" id="search_scope">
+                        	<option selected="selected" value="EOANFx" data-frontend="mg_anf">in Administration and Finance</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/atb|(author:atb.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Appellate Tax Board</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/bsb|(author:bsb.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Bureau of the State House</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/csc|(author:csc.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Civil Service Commission</option>
+<option value="DORx" data-frontend="mg_anf" class="hide" disabled>in Department of Revenue</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/dala|(author:dala.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Administrative Law Appeals</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/dcam|(author:dcam.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Capital Asset Management and Maintenance</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/gic|(author:gic.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Group Insurance Commission</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/hpc|(author:hpc.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Health Policy Commission</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/hrd|(author:hrd.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Human Resource Division</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/itd|(author:itd.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Information Technology</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/mddc|(author:mddc.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Developmental Disabilities Council</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/mod|(author:mod.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Office on Disability</option>
+<option value="EOAFxMTRSx" class="hide" disabled>in Massachusetts Teachers&#39; Retirement System</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/osd|(author:osd.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in Operational Services</option>
+<option value="PERACx" data-frontend="mg_anf" class="hide" disabled>in Public Employee Retirement Administration Commission</option>
+<option value="EOANFx" data-frontend="mg_anf" data-author="gsaentity_author:anf/lib|(author:lib.publisher:Executive Office for Administration and Finance)" class="hide" disabled>in State Library</option>
+							<option value="EOANFxDECISIONSx" data-frontend="mg_anf">in Decisions</option>
+							<option value="default_collection" data-frontend="massgov">in Mass.Gov</option>
+						</select>
+    				    				  <input id="submit" type="image" src="/resources/images/template/search-button.png" alt="Search" />
+    				</form>
+    			  </div><!-- .col .col6 -->
+				</div><!-- .row -->
+<!--	END HEADER	-->
+		
+<!-- site alert start -->
+<!-- site alert end --><!--googleoff: index-->
+<div class="row megadd">
+    
+  <div id="nav" role="application">
+   <h2 id="main_menu" class="accessibility">Main Menu</h2> 
+     <ul role="navigation" aria-labelledby="main_menu" id="topnav" class="megamenu is-megadd">  
+
+<li style='width:180px' class="
+        menu    " role="presentation">
+	<div class="nav_label">
+            
+					<a class="tab" aria-haspopup="true" aria-expanded="false" href="/anf/budget-taxes-and-procurement/"><span>Budget, Taxes, Procurement &amp; Regulations</span></a>   
+</div><!-- .nav_label -->
+	<div class="kb_expando"><a href="#main">Expand Budget, Taxes, Procurement &amp; Regulations</a></div>
+	
+
+        	<div class="sub" aria-hidden="true" role="presentation">
+			<div class="category" role="presentation">
+
+				<ul class="category-drop">
+			     
+<li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/budget-taxes-and-procurement/state-budget/">                            State Budget                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/budget-taxes-and-procurement/state-budget/">State Budget
+</a></li>
+<li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/state-budget/fy17-budget-info/" class="titlelink" >                            FY2017 Budget Information                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/state-budget/fy16-budget-info/" class="titlelink" >                            FY2016 Budget Information                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/budget-taxes-and-procurement/state-budget/budget-process/" class="flag_link titlelink" >                            Budgetary Process                </a></span>
+</li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/budget-taxes-and-procurement/procurement-info-and-res/">                            Procurement Information                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/budget-taxes-and-procurement/procurement-info-and-res/">Procurement Information &amp; Resources
+</a></li>
+<li class="subcat-li"><span class="lead_snippet"><a href="/anf/budget-taxes-and-procurement/procurement-info-and-res/conduct-a-procurement/" class="flag_link titlelink" >                            Best Value Procurement Handbook                </a></span>
+</li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/procurement-info-and-res/conduct-a-procurement/commbuys/" class="titlelink" >                            COMMBUYS Resource Center                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/anf/budget-taxes-and-procurement/procurement-info-and-res/training/" class="flag_link titlelink" >                            COMMBUYS Training link                
+</a></span>
+</li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/procurement-info-and-res/procurement-prog-and-serv/massbuys/" class="titlelink" >                            MASSBUYS EXPO                 </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/procurement-info-and-res/procurement-prog-and-serv/sdo/" class="titlelink" >                            Supplier Diversity Office (SDO)                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/budget-taxes-and-procurement/taxes/">                            Taxes                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/budget-taxes-and-procurement/taxes/">Taxes
+</a></li>
+<li class="subcat-li"><span class="lead_snippet"><a href="/dor/individuals/" class="flag_link titlelink" >                            Individuals and Families                </a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="/dor/businesses/" class="flag_link titlelink" >                            Businesses                </a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="/dor/tax-professionals/" class="flag_link titlelink" >                            Information for Tax Professionals                </a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.irs.gov/" class="flag_link titlelink" >                            Internal Revenue Service                
+</a></span>
+</li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/budget-taxes-and-procurement/cap-finance/">                            Capital Finance                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/budget-taxes-and-procurement/cap-finance/">Capital Finance
+</a></li>
+<li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/cap-finance/i-cubed/" class="titlelink" >                            I-Cubed                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/cap-finance/i-cubed/overview-of-i-cubed.html" class="titlelink" >                            Overview of I-Cubed                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/cap-finance/fab/" class="titlelink" >                            State Finance and Governance Board                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/cap-finance/capital-debt-affordability-committee/" class="titlelink" >                            Capital Debt Affordability Committee                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/budget-taxes-and-procurement/admin-bulletins/">                            Administrative Bulletins                </a>
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/budget-taxes-and-procurement/oversight-agencies/">                            Oversight Agencies                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/budget-taxes-and-procurement/oversight-agencies/">Oversight Agencies
+</a></li>
+<li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/oversight-agencies/osd/" class="titlelink" >                            Operational Services Division                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/?pageID=dorhomepage&amp;L=1&amp;L0=Home&amp;sid=Ador" class="flag_link titlelink" >                            Department of Revenue                
+</a></span>
+</li>                                </ul>
+	</div><!-- .subcat -->
+</li>				 <li class="category-drop-li list-container-content"> 
+<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-key fa-stack-1x fa-inverse"></i></span><a class="nav_bubblelabel" href="#">                            Administration &amp; Finance Agency List                </a><div class="subcat">
+    <ul>	
+    	<li class="subcat-heading" aria-hidden="true">                            Administration &amp; Finance Agency List                </li>
+	<li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/atb/" class="titlelink" >                            Appellate Tax Board                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/bsb/" class="titlelink" >                            Bureau of the State House                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/csc/" class="titlelink" >                            Civil Service Commission                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/dor" class="flag_link titlelink" >                            Dept. of Revenue (DOR)                </a></span>
+</li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/dala/" class="titlelink" >                            Division of Administrative Law Appeals                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/dcam/" class="titlelink" >                            Div. of Capital Asset Management &amp; Maintenance (DCAMM)                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/oversight-agencies/gic/" class="titlelink" >                            Group Insurance Commission                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/hrd/" class="titlelink" >                            Human Resources Division                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/itd/" class="titlelink" >                            MassIT - Massachusetts Office of Information Technology                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/lib/" class="titlelink" >                            State Library                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mddc/" class="titlelink" >                            Massachusetts Developmental Disabilities Council                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mod/" class="titlelink" >                            Massachusetts Office on Disability                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/oversight-agencies/osd/" class="titlelink" >                            Operational Services Division                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/mtrs/" class="flag_link titlelink" >                            Mass Teachers Retirement Board                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/perac/" class="flag_link titlelink" >                            Public Employee Retirement Admin. Comm.                
+</a></span>
+</li>	</ul>
+        </div><!-- .subcat -->
+</li>				</ul>
+			</div><!-- .category -->
+			<div class="dd-drawer" role="presentation">
+			 			</div><!-- .dd-drawer -->
+    	</div><!-- .sub -->
+    
+    			</li>
+
+<li style='width:155px' class="
+        menu    " role="presentation">
+	<div class="nav_label">
+            
+					<a class="tab" aria-haspopup="true" aria-expanded="false" href="/anf/employment-equal-access-disability/"><span>Employment, Equal Access, Disability</span></a>   
+</div><!-- .nav_label -->
+	<div class="kb_expando"><a href="#main">Expand Employment, Equal Access, Disability</a></div>
+	
+
+        	<div class="sub" aria-hidden="true" role="presentation">
+			<div class="category" role="presentation">
+
+				<ul class="category-drop">
+			     
+<li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employment-equal-access-disability/civil-serv-info/">                            Civil Service                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employment-equal-access-disability/civil-serv-info/">Civil Service Information
+</a></li>
+<li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/civil-serv-overview/" class="titlelink" >                            Civil Service Overview                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/civil-serv-news-and-updates/" class="titlelink" >                            Civil Service News &amp; Updates                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/exam-info/" class="titlelink" >                            Examination Information                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/employment-equal-access-disability/civil-serv-info/forms/exam-form-archive/" class="flag_link titlelink" >                            Exam Forms &amp; Notice to Appear Info                </a></span>
+</li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/vet-and-active-duty-military-info/" class="titlelink" >                            Veteran &amp; Active Military Info                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/forms/" class="titlelink" >                            Forms                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/guides-and-publications/" class="titlelink" >                            Guides &amp; Publications                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/update-your-info/" class="titlelink" >                            How to Update Your Applicant Information                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/med-and-physical-fitness-stnds/" class="titlelink" >                            Medical &amp; Physical Fitness Standards                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/contact-civil-service/" class="titlelink" >                            Contact Civil Service Unit                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/civil-serv-info/multimedia/" class="titlelink" >                            Multimedia - Civil Service                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employment-equal-access-disability/disability-info-and-resources/">                            Disability Information and Resources                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employment-equal-access-disability/disability-info-and-resources/">Disability Information and Resources
+</a></li>
+<li class="subcat-li"><a href="/anf/employment-equal-access-disability/disability-info-and-resources/access-community-living-and-tech/" class="titlelink" >                            Access, Community Living and Technology                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/disability-info-and-resources/advocacy-and-civil-rights/" class="titlelink" >                            Advocacy &amp; Civil Rights                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/disability-info-and-resources/dev-disabilities-info/" class="titlelink" >                            Developmental Disabilities Info                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/disability-info-and-resources/equip-and-tech/" class="titlelink" >                            Equipment &amp; Technology                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/disability-info-and-resources/housing/" class="titlelink" >                            Housing                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/disability-info-and-resources/independent-living/" class="titlelink" >                            Independent Living                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/disability-info-and-resources/legal-consumer/" class="titlelink" >                            Legal - Consumer                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/eohhs/consumer/disability-services/services-by-type/" class="flag_link titlelink" >                            Services by Type of Disability                </a></span>
+</li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/disability-info-and-resources/taxes/" class="titlelink" >                            Taxes                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/disability-info-and-resources/vehicles-and-transportation/" class="titlelink" >                            Vehicles                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/">                            Diversity, Access &amp; Opportunity                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/">Diversity, Access &amp; Opportunity
+</a></li>
+<li class="subcat-li"><a href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/affirmative-action-policies/" class="titlelink" >                            Affirmative Action Policy                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/model-employer/" class="titlelink" >                            Model Employer                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/diversity-in-the-commonwealth.html" class="titlelink" >                            Diversity in The Commonwealth                </a></li><li class="subcat-li"><span class="lead_snippet"><a class="titlelink" href="/anf/docs/hrd/odeo/diversity-training.rtf" >                            Diversity Training                </a>&#160;<a class="doc_link" href="/anf/docs/hrd/odeo/diversity-training.rtf"><img src="/resources/images/template/icon_doc_rtf.png" alt="rtf format of Diversity Training
+" border="0" /></a></span></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/odeo-annual-rpt/" class="titlelink" >                            ODEO Annual Report                </a></li><li class="subcat-li"><span class="lead_snippet"><a class="titlelink" href="/anf/docs/hrd/odeo/ma-county-percents-by-govt-occ-groups.xls" >                            Census2010 Employment by State &amp;Local Occupation Groups                </a>&#160;<a class="doc_link" href="/anf/docs/hrd/odeo/ma-county-percents-by-govt-occ-groups.xls"><img src="/resources/images/template/icon_doc_xls.png" alt="xls format of Census2010 Employment by State &amp;Local Occupation Groups
+" border="0" /></a></span></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/glossary-of-terms.html" class="titlelink" >                            Glossary of Terms                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/how-to-access-state-government-employment.html" class="titlelink" >                            How to Access State Government Employment                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/vietnam-vet-info/" class="titlelink" >                            Vietnam Era Veteran Info Form                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/diversity-access-and-opportunity/career-exploration/" class="titlelink" >                            Commonwealth Career Fair 2016                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employment-equal-access-disability/employee-prog-and-training/">                            Employee Programs &amp; Training                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employment-equal-access-disability/employee-prog-and-training/">Employee Programs &amp; Training
+</a></li>
+<li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-prog-and-training/serv/" class="titlelink" >                            SERV                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-prog-and-training/comecc/" class="titlelink" >                            Charitable Campaign                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-prog-and-training/eilb.html" class="titlelink" >                            EILB                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-prog-and-training/performance-recog-prog/" class="titlelink" >                            Performance Recognition Program                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-prog-and-training/fellowship-prog/" class="titlelink" >                            Executive Branch Fellowship Programs                 </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-prog-and-training/tuition-remission/" class="titlelink" >                            Tuition Remission                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-prog-and-training/training-and-learning-dev/" class="titlelink" >                            TLD                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-prog-and-training/hrd-internal-appl/" class="titlelink" >                            Internal Applications                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employment-equal-access-disability/hr-policies/">                            HR Policies                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employment-equal-access-disability/hr-policies/">HR Policies
+</a></li>
+<li class="subcat-li"><a href="/anf/employment-equal-access-disability/hr-policies/alt-work-options/" class="titlelink" >                            Alternative Work Options                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/hr-policies/dom-violence-sexual-assault-and-stalking-awareness/" class="titlelink" >                            Dom Violence Sexual Assault and Stalking Awareness                </a></li><li class="subcat-li"><span class="lead_snippet"><a class="titlelink" href="/anf/docs/hrd/ceo/forms/ceo-empappl.doc" >                            Employment Application                </a>&#160;<a class="doc_link" href="/anf/docs/hrd/ceo/forms/ceo-empappl.doc"><img src="/resources/images/template/icon_doc_doc.png" alt="doc format of Employment Application
+" border="0" /></a></span></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/hr-policies/leave-program/" class="titlelink" >                            Leave Program                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/hr-policies/legal-holiday-calendar.html" class="titlelink" >                            Legal Holiday Calendar                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/hr-policies/orientation-kit/" class="titlelink" >                            New Employee Orientation                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/hr-policies/sexual-harassment/" class="titlelink" >                            Sexual Harassment                </a></li><li class="subcat-li"><span class="lead_snippet"><a class="titlelink" href="/anf/docs/hrd/policies/files/time-attendance-policy.doc" >                            Exec. Dept. Time and Attendance Policy                   </a>&#160;<a class="doc_link" href="/anf/docs/hrd/policies/files/time-attendance-policy.doc"><img src="/resources/images/template/icon_doc_doc.png" alt="doc format of Exec. Dept. Time and Attendance Policy   
+" border="0" /></a></span></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/hr-policies/masshr/" class="titlelink" >                            MassHR                 </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employment-equal-access-disability/employee-benefits-and-comp/">                            Benefits &amp; Compensation                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employment-equal-access-disability/employee-benefits-and-comp/">State Employee Benefits &amp; Compensation
+</a></li>
+<li class="subcat-li"><span class="lead_snippet"><a class="titlelink" href="/anf/docs/hrd/policies/publications/pol-graybk.pdf" >                            Gray Book                </a>&#160;<a class="doc_link" href="/anf/docs/hrd/policies/publications/pol-graybk.pdf"><img src="/resources/images/template/icon_doc_pdf.png" alt="pdf format of Gray Book
+" border="0" /></a> </span></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/" class="flag_link titlelink" >                            Insurance                </a></span>
+</li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-benefits-and-comp/mileage-rates/" class="titlelink" >                            Mileage Reimbursement Rates                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-benefits-and-comp/military-pay-act/" class="titlelink" >                            Military Pay Act                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="#" class="flag_link titlelink" >                            Payroll Programs                
+</a></span>
+</li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-benefits-and-comp/perf-reviews-and-mgmt-comp/" class="titlelink" >                            Performance Reviews                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-benefits-and-comp/post-retirement-employ-guidelines/" class="titlelink" >                            Post Retirement Employment Guidelines                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/employment-equal-access-disability/hr-policies/leave-program/red-book/" class="flag_link titlelink" >                            Red Book                </a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/employee-insurance-and-retirement-benefits/retirement/" class="flag_link titlelink" >                            Retirement Benefits                </a></span>
+</li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/employee-benefits-and-comp/tpl/" class="titlelink" >                            Technical Pay Law                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/employment-equal-access-disability/employee-prog-and-training/tuition-remission/" class="flag_link titlelink" >                            Tuition Remission                </a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://mastatecu.org/" class="flag_link titlelink" >                            Metro Credit Union for Mass State Employees                
+</a></span>
+</li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employment-equal-access-disability/workers-comp/">                            Workers Compensation                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employment-equal-access-disability/workers-comp/">Workers&#39; Compensation
+</a></li>
+<li class="subcat-li"><span class="lead_snippet"><a href="https://www.eservices.hrd.state.ma.us/wclogin.aspx" class="flag_link titlelink" >                            Workers&#39; Comp eServices                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="https://www.eservices.hrd.state.ma.us/Forms.aspx" class="flag_link titlelink" >                            WC Forms                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="https://www.eservices.hrd.state.ma.us/FAQ.aspx" class="flag_link titlelink" >                            WC FAQ&#39;s                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="https://www.eservices.hrd.state.ma.us/ContactUs.aspx" class="flag_link titlelink" >                            WC Contacts                
+</a></span>
+</li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employment-equal-access-disability/oversight-agencies/">                            Oversight Agencies                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employment-equal-access-disability/oversight-agencies/">Oversight Agencies
+</a></li>
+<li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/hrd/" class="titlelink" >                            Human Resources Division                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mddc/" class="titlelink" >                            Massachusetts Developmental Disabilities Council                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mod/" class="titlelink" >                            Massachusetts Office on Disability                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li>				 <li class="category-drop-li list-container-content"> 
+<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-key fa-stack-1x fa-inverse"></i></span><a class="nav_bubblelabel" href="#">                            Administration &amp; Finance Agency List                </a><div class="subcat">
+    <ul>	
+    	<li class="subcat-heading" aria-hidden="true">                            Administration &amp; Finance Agency List                </li>
+	<li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/atb/" class="titlelink" >                            Appellate Tax Board                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/bsb/" class="titlelink" >                            Bureau of the State House                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/csc/" class="titlelink" >                            Civil Service Commission                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/dor" class="flag_link titlelink" >                            Dept. of Revenue (DOR)                </a></span>
+</li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/dala/" class="titlelink" >                            Division of Administrative Law Appeals                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/dcam/" class="titlelink" >                            Div. of Capital Asset Management &amp; Maintenance (DCAMM)                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/oversight-agencies/gic/" class="titlelink" >                            Group Insurance Commission                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/hrd/" class="titlelink" >                            Human Resources Division                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/itd/" class="titlelink" >                            MassIT - Massachusetts Office of Information Technology                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/lib/" class="titlelink" >                            State Library                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mddc/" class="titlelink" >                            Massachusetts Developmental Disabilities Council                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mod/" class="titlelink" >                            Massachusetts Office on Disability                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/oversight-agencies/osd/" class="titlelink" >                            Operational Services Division                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/mtrs/" class="flag_link titlelink" >                            Mass Teachers Retirement Board                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/perac/" class="flag_link titlelink" >                            Public Employee Retirement Admin. Comm.                
+</a></span>
+</li>	</ul>
+        </div><!-- .subcat -->
+</li>				</ul>
+			</div><!-- .category -->
+			<div class="dd-drawer" role="presentation">
+			 			</div><!-- .dd-drawer -->
+    	</div><!-- .sub -->
+    
+    			</li>
+
+<li style='width:175px' class="
+        menu    " role="presentation">
+	<div class="nav_label">
+            
+					<a class="tab" aria-haspopup="true" aria-expanded="false" href="/anf/property-mgmt-and-construction/"><span>Property Management &amp; Construction</span></a>   
+</div><!-- .nav_label -->
+	<div class="kb_expando"><a href="#main">Expand Property Management &amp; Construction</a></div>
+	
+
+        	<div class="sub" aria-hidden="true" role="presentation">
+			<div class="category" role="presentation">
+
+				<ul class="category-drop">
+			     
+<li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/property-mgmt-and-construction/design-and-construction-of-public-bldgs/">                            Design &amp; Construction of Public Buildings                </a>
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/property-mgmt-and-construction/facilities-mgmt-and-maintenance/">                            Facilities Management &amp; Maintenance                </a>
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/property-mgmt-and-construction/sale-and-lease-of-state-assets/">                            Sale and Lease of State Assets                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/property-mgmt-and-construction/sale-and-lease-of-state-assets/">Sale and Lease of State Assets
+</a></li>
+<li class="subcat-li"><a href="/anf/property-mgmt-and-construction/sale-and-lease-of-state-assets/comprehensive-real-estate-serv/" class="titlelink" >                            Comprehensive Real Estate Services                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/sale-and-lease-of-state-assets/leasing-and-state-office-planning/" class="titlelink" >                            Leasing and State Office Planning                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/budget-taxes-and-procurement/procurement-info-and-res/procurement-prog-and-serv/surplus-prop-prog/" class="flag_link titlelink" >                            Surplus Property Program (OSD, excludes land...                </a></span>
+</li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/property-mgmt-and-construction/info-and-guide-for-municipalities/">                            Information &amp; Guidance for Municipalities                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/property-mgmt-and-construction/info-and-guide-for-municipalities/">Information &amp; Guidance for Municipalities
+</a></li>
+<li class="subcat-li"><a href="/anf/property-mgmt-and-construction/info-and-guide-for-municipalities/emergency-waiver-requests-by-public-awarding.html" class="titlelink" >                            Emergency Waiver Requests by Public Awarding...                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/property-mgmt-and-construction/design-and-construction-of-public-bldgs/prequal-info-for-public-bldg-construction/" class="flag_link titlelink" >                            Prequal Info for Public Building Construction                </a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a class="titlelink" href="/anf/docs/dcam/pubbldgconstr/own-pm-guide.pdf" >                            Owner&#39;s Project Manager Guidelines                </a>&#160;<a class="doc_link" href="/anf/docs/dcam/pubbldgconstr/own-pm-guide.pdf"><img src="/resources/images/template/icon_doc_pdf.png" alt="pdf format of Owner&#39;s Project Manager Guidelines
+" border="0" /></a></span></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/property-mgmt-and-construction/oversight-agencies/designer-selection-process/designer-selection-proc-and-evals-for-municipalities/" class="flag_link titlelink" >                            Designer Selection Process &amp; Evals for Municips                </a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/property-mgmt-and-construction/design-and-construction-of-public-bldgs/contractor-certification/" class="flag_link titlelink" >                            Contractor Certification                </a></span>
+</li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/property-mgmt-and-construction/forms-contracts-guidelines-and-manuals/">                            Forms, Contracts, Guidelines and Manuals                </a>
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/property-mgmt-and-construction/oversight-agencies/">                            Oversight Agencies                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/property-mgmt-and-construction/oversight-agencies/">Oversight Agencies
+</a></li>
+<li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/bsb/" class="titlelink" >                            Bureau of the State House                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/dcam/" class="titlelink" >                            Div. of Capital Asset Management &amp; Maintenance (DCAMM)                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/designer-selection-process/" class="titlelink" >                            Designer Selection Board                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li>				 <li class="category-drop-li list-container-content"> 
+<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-key fa-stack-1x fa-inverse"></i></span><a class="nav_bubblelabel" href="#">                            Administration &amp; Finance Agency List                </a><div class="subcat">
+    <ul>	
+    	<li class="subcat-heading" aria-hidden="true">                            Administration &amp; Finance Agency List                </li>
+	<li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/atb/" class="titlelink" >                            Appellate Tax Board                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/bsb/" class="titlelink" >                            Bureau of the State House                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/csc/" class="titlelink" >                            Civil Service Commission                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/dor" class="flag_link titlelink" >                            Dept. of Revenue (DOR)                </a></span>
+</li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/dala/" class="titlelink" >                            Division of Administrative Law Appeals                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/dcam/" class="titlelink" >                            Div. of Capital Asset Management &amp; Maintenance (DCAMM)                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/oversight-agencies/gic/" class="titlelink" >                            Group Insurance Commission                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/hrd/" class="titlelink" >                            Human Resources Division                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/itd/" class="titlelink" >                            MassIT - Massachusetts Office of Information Technology                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/lib/" class="titlelink" >                            State Library                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mddc/" class="titlelink" >                            Massachusetts Developmental Disabilities Council                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mod/" class="titlelink" >                            Massachusetts Office on Disability                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/oversight-agencies/osd/" class="titlelink" >                            Operational Services Division                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/mtrs/" class="flag_link titlelink" >                            Mass Teachers Retirement Board                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/perac/" class="flag_link titlelink" >                            Public Employee Retirement Admin. Comm.                
+</a></span>
+</li>	</ul>
+        </div><!-- .subcat -->
+</li>				</ul>
+			</div><!-- .category -->
+			<div class="dd-drawer" role="presentation">
+			 			</div><!-- .dd-drawer -->
+    	</div><!-- .sub -->
+    
+    			</li>
+
+<li style='width:135px' class="
+        menu    " role="presentation">
+	<div class="nav_label">
+            
+					<a class="tab" aria-haspopup="true" aria-expanded="false" href="/anf/hearings-and-appeals/"><span>Hearings and Appeals</span></a>   
+</div><!-- .nav_label -->
+	<div class="kb_expando"><a href="#main">Expand Hearings and Appeals</a></div>
+	
+
+        	<div class="sub" aria-hidden="true" role="presentation">
+			<div class="category" role="presentation">
+
+				<ul class="category-drop">
+			     
+<li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/hearings-and-appeals/admin-appeals-proc/">                            Administrative Appeals Process                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/hearings-and-appeals/admin-appeals-proc/">Administrative Appeals Process
+</a></li>
+<li class="subcat-li"><a href="/anf/hearings-and-appeals/admin-appeals-proc/introduction-to-the-division-of-administrative.html" class="titlelink" >                            Introduction to the Division of Administrative...                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/admin-appeals-proc/practice-and-procedures/" class="titlelink" >                            Practice and Procedures                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/hearings-and-appeals/civil-service-appeals-process/">                            Civil Service Appeals Process                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/hearings-and-appeals/civil-service-appeals-process/">Civil Service Appeals Process
+</a></li>
+<li class="subcat-li"><a href="/anf/hearings-and-appeals/civil-service-appeals-process/filing-your-appeal/" class="titlelink" >                            Filing Your Appeal                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/hearings-and-appeals/admin-appeals-proc/practice-and-procedures/801-cmr-1-00/" class="flag_link titlelink" >                            Rules of Practice and Procedure                </a></span>
+</li><li class="subcat-li"><a href="/anf/hearings-and-appeals/civil-service-appeals-process/before-the-hearing.html" class="titlelink" >                            Before the Hearing                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/civil-service-appeals-process/at-the-hearing.html" class="titlelink" >                            At the Hearing                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/civil-service-appeals-process/weekly-docket-sheet-of-upcoming-hearings/" class="titlelink" >                            Weekly Docket Sheet of Upcoming Hearings                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/hearings-and-appeals/tax-appeals-process/">                            Tax Appeals Process                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/hearings-and-appeals/tax-appeals-process/">Tax Appeals Process
+</a></li>
+<li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/atb/" class="titlelink" >                            Appellate Tax Board                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/tax-appeals-process/forms-and-instructions/" class="titlelink" >                            Forms and Instructions                </a></li><li class="subcat-li"><span class="lead_snippet"><a class="titlelink" href="/anf/docs/atb/guide.pdf" >                            Guide for Taxpayers                </a>&#160;<a class="doc_link" href="/anf/docs/atb/guide.pdf"><img src="/resources/images/template/icon_doc_pdf.png" alt="pdf format of Guide for Taxpayers
+" border="0" /></a></span></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/tax-appeals-process/jurisdiction-cklsts/" class="titlelink" >                            Jurisdiction Checklists                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/atb/water-bill-appeals.html" class="titlelink" >                            Water Bill Appeals                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/hearings-and-appeals/decisions/">                            Decisions                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/hearings-and-appeals/decisions/">Decisions
+</a></li>
+<li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/civil-service-decisions/" class="titlelink" >                            Civil Service Decisions                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/brd-of-reg-in-med-decisions/" class="titlelink" >                            Board of Registration in Medicine Decisions                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/early-educ-and-care-decisions/" class="titlelink" >                            Early Education and Care Decisions                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/environmental-decisions/" class="titlelink" >                            Environmental Decisions                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/fair-labor-and-bus-prac-dec/" class="titlelink" >                            Fair Labor and Business Practices                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/public-health-decisions/" class="titlelink" >                            Public Health Decisions                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/retirement-decisions/" class="titlelink" >                            Retirement Decisions                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/dua-decisions/" class="titlelink" >                            Division of Unemployment Assistance Decisions                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/tax-appeal-decisions/" class="titlelink" >                            Tax Appeal Decisions                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/decisions/gen-jurisdiction-decisions/" class="titlelink" >                            General Jurisdiction Decisions (Alphabetical)                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/hearings-and-appeals/oversight-agencies/">                            Oversight Agencies                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/hearings-and-appeals/oversight-agencies/">Oversight Agencies
+</a></li>
+<li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/csc/" class="titlelink" >                            Civil Service Commission                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/dala/" class="titlelink" >                            Division of Administrative Law Appeals                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/atb/" class="titlelink" >                            Appellate Tax Board                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li>				 <li class="category-drop-li list-container-content"> 
+<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-key fa-stack-1x fa-inverse"></i></span><a class="nav_bubblelabel" href="#">                            Administration &amp; Finance Agency List                </a><div class="subcat">
+    <ul>	
+    	<li class="subcat-heading" aria-hidden="true">                            Administration &amp; Finance Agency List                </li>
+	<li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/atb/" class="titlelink" >                            Appellate Tax Board                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/bsb/" class="titlelink" >                            Bureau of the State House                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/csc/" class="titlelink" >                            Civil Service Commission                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/dor" class="flag_link titlelink" >                            Dept. of Revenue (DOR)                </a></span>
+</li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/dala/" class="titlelink" >                            Division of Administrative Law Appeals                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/dcam/" class="titlelink" >                            Div. of Capital Asset Management &amp; Maintenance (DCAMM)                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/oversight-agencies/gic/" class="titlelink" >                            Group Insurance Commission                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/hrd/" class="titlelink" >                            Human Resources Division                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/itd/" class="titlelink" >                            MassIT - Massachusetts Office of Information Technology                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/lib/" class="titlelink" >                            State Library                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mddc/" class="titlelink" >                            Massachusetts Developmental Disabilities Council                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mod/" class="titlelink" >                            Massachusetts Office on Disability                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/oversight-agencies/osd/" class="titlelink" >                            Operational Services Division                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/mtrs/" class="flag_link titlelink" >                            Mass Teachers Retirement Board                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/perac/" class="flag_link titlelink" >                            Public Employee Retirement Admin. Comm.                
+</a></span>
+</li>	</ul>
+        </div><!-- .subcat -->
+</li>				</ul>
+			</div><!-- .category -->
+			<div class="dd-drawer" role="presentation">
+			 			</div><!-- .dd-drawer -->
+    	</div><!-- .sub -->
+    
+    			</li>
+
+<li style='width:155px' class="
+        menu menu_on    " role="presentation">
+	<div class="nav_label">
+        <span class="accessibility">The current page belongs to the main category of </span>    
+					<a class="tab" aria-haspopup="true" aria-expanded="false" href="/anf/research-and-tech/"><span>Research &amp; Technology</span></a>   
+</div><!-- .nav_label -->
+	<div class="kb_expando"><a href="#main">Expand Research &amp; Technology</a></div>
+	
+
+        	<div class="sub" aria-hidden="true" role="presentation">
+			<div class="category" role="presentation">
+
+				<ul class="category-drop">
+			     
+<li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/it-serv-and-support/">                            Information Technology Services                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/research-and-tech/it-serv-and-support/">Information Technology Services &amp; Support
+</a></li>
+<li class="subcat-li"><a href="/anf/research-and-tech/it-serv-and-support/customer-support/" class="titlelink" >                            Customer Support                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/it-serv-and-support/application-serv/" class="titlelink" >                            Application Services                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/it-serv-and-support/itds-services-catalog/" class="titlelink" >                            MassIT&#39;s Services Catalog                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/gov-data-and-docs/">                            Government Data &amp; Documents                </a>
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/policies-legal-and-technical-guidance/">                            Policies, Legal &amp; Technical Guidance                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/research-and-tech/policies-legal-and-technical-guidance/">Policies, Legal &amp; Technical Guidance
+</a></li>
+<li class="subcat-li"><a href="/anf/research-and-tech/policies-legal-and-technical-guidance/it-policies-standards-and-procedures/" class="titlelink" >                            IT Policies, Standards and Procedures                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/policies-legal-and-technical-guidance/legal-guidance/" class="titlelink" >                            Legal Guidance                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/policies-legal-and-technical-guidance/web-guidance-and-best-pract/" class="titlelink" >                            Website guidance &amp; best practices                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/policies-legal-and-technical-guidance/tech-guidance/" class="titlelink" >                            Technical Guidance                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/policies-legal-and-technical-guidance/it-exec-orders/" class="titlelink" >                            Information Technology Executive Orders                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/legal-and-legislative-resources/">                            Legal &amp; Legislative Resources                </a>
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/cyber-security/">                            Cyber Security                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/research-and-tech/cyber-security/">Cyber Security
+</a></li>
+<li class="subcat-li"><a href="/anf/research-and-tech/cyber-security/security-for-state-employees/security-policies-and-standards/information-security-policy.html" class="titlelink" >                            Information Security Policy                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/cyber-security/security-for-state-employees/risk-assessment/" class="titlelink" >                            Risk Assessment                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/cyber-security/security-for-state-employees/security-policies-and-standards/enterprise-access-control-policy.html" class="titlelink" >                            Enterprise Access Control Policy                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/cyber-security/security-for-state-employees/security-policies-and-standards/" class="titlelink" >                            Security Policies &amp; Standards                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/it-planning-and-collab/">                            Planning &amp; Collaboration                </a>
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/news-and-current-events/">                            News &amp; Current Events                </a>
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/research-state-and-local-history/">                            Research State &amp; Local History                </a>
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/it-finance-and-procurement/">                            Information Technology Finance &amp; Procurement                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/research-and-tech/it-finance-and-procurement/">Information Technology Finance &amp; Procurement
+</a></li>
+<li class="subcat-li"><a href="/anf/research-and-tech/it-finance-and-procurement/chargeback-serv/" class="titlelink" >                            Chargeback                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/it-finance-and-procurement/epp/projects/oracle.html" class="titlelink" >                            Oracle                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/it-finance-and-procurement/chargeback-serv/massgov-chargeback.html" class="titlelink" >                            Mass.Gov chargeback                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/it-finance-and-procurement/chargeback-serv/chargeback-overview.html" class="titlelink" >                            Chargeback Overview                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/research-and-tech/oversight-agencies/">                            Oversight Agencies                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/research-and-tech/oversight-agencies/">Oversight Agencies
+</a></li>
+<li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/itd/" class="titlelink" >                            MassIT - Massachusetts Office of Information Technology                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/lib/" class="titlelink" >                            State Library                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li>				 <li class="category-drop-li list-container-content"> 
+<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-key fa-stack-1x fa-inverse"></i></span><a class="nav_bubblelabel" href="#">                            Administration &amp; Finance Agency List                </a><div class="subcat">
+    <ul>	
+    	<li class="subcat-heading" aria-hidden="true">                            Administration &amp; Finance Agency List                </li>
+	<li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/atb/" class="titlelink" >                            Appellate Tax Board                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/bsb/" class="titlelink" >                            Bureau of the State House                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/csc/" class="titlelink" >                            Civil Service Commission                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/dor" class="flag_link titlelink" >                            Dept. of Revenue (DOR)                </a></span>
+</li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/dala/" class="titlelink" >                            Division of Administrative Law Appeals                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/dcam/" class="titlelink" >                            Div. of Capital Asset Management &amp; Maintenance (DCAMM)                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/oversight-agencies/gic/" class="titlelink" >                            Group Insurance Commission                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/hrd/" class="titlelink" >                            Human Resources Division                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/itd/" class="titlelink" >                            MassIT - Massachusetts Office of Information Technology                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/lib/" class="titlelink" >                            State Library                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mddc/" class="titlelink" >                            Massachusetts Developmental Disabilities Council                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mod/" class="titlelink" >                            Massachusetts Office on Disability                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/oversight-agencies/osd/" class="titlelink" >                            Operational Services Division                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/mtrs/" class="flag_link titlelink" >                            Mass Teachers Retirement Board                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/perac/" class="flag_link titlelink" >                            Public Employee Retirement Admin. Comm.                
+</a></span>
+</li>	</ul>
+        </div><!-- .subcat -->
+</li>				</ul>
+			</div><!-- .category -->
+			<div class="dd-drawer" role="presentation">
+			 			</div><!-- .dd-drawer -->
+    	</div><!-- .sub -->
+    
+    			</li>
+
+<li style='width:171px' class="
+        menu    " role="presentation">
+	<div class="nav_label">
+            
+					<a class="tab" aria-haspopup="true" aria-expanded="false" href="/anf/employee-insurance-and-retirement-benefits/"><span>Employee Insurance &amp; Retirement Benefits</span></a>   
+</div><!-- .nav_label -->
+	<div class="kb_expando"><a href="#main">Expand Employee Insurance &amp; Retirement Benefits</a></div>
+	
+
+        	<div class="sub" aria-hidden="true" role="presentation">
+			<div class="category" role="presentation">
+
+				<ul class="category-drop">
+			     
+<li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/">                            GIC Health and Other Insurance Benefits                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/">GIC Health and Other Insurance Benefits
+</a></li>
+<li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/health-plans/" class="titlelink" >                            Health Plans                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/life-insurance-and-accidental-death/" class="titlelink" >                            Life Insurance &amp; Accidental Death                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/wellness-pilot/" class="titlelink" >                            Wellness Program                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/long-term-disability/" class="titlelink" >                            Long Term Disability                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/dental-and-vision/" class="titlelink" >                            Dental &amp; Vision                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/pretax-benefits/health-care-spending-account-hcsa.html" class="titlelink" >                            Health Care Spending Account (HCSA)                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/pretax-benefits/dependent-care-assist-prog-dcap.html" class="titlelink" >                            Dependent Care Assist Prog (DCAP)                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/">                            Benefit Enrollment                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/">Benefit Enrollment
+</a></li>
+<li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/benefit-decision-guides/" class="titlelink" >                            Benefit Decision Guides                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/open-enrollment-for-new-municipalities.html" class="titlelink" >                            Open Enrollment for New Municipalities                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/annual-enrollment-options-for-state-employees.html" class="titlelink" >                            Annual Enrollment Options for State Employees                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/annual-enrollment-options-for-state-retirees.html" class="titlelink" >                            Annual Enrollment Options for State Retirees...                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/annual-enrollment-options-for-municipal-members.html" class="titlelink" >                            Annual Enrollment Options for Municipal Members                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/new-employees.html" class="titlelink" >                            New Employees                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/rmts/" class="titlelink" >                            GIC RMTs                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/open-enrollment-for-hcsa-and-dcap-for-employees/" class="titlelink" >                            Open Enrollment for HCSA and DCAP for Employees                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/inscripcion-anual.html" class="titlelink" >                            Inscripcion Anual                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/forms/" class="titlelink" >                            Enrollment Forms                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/glossary-of-terms.html" class="titlelink" >                            Glossary of Terms                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/benefit-enrollment/public-information-meeting.html" class="titlelink" >                            Public Information Meeting                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employee-insurance-and-retirement-benefits/oversight-agencies/">                            Oversight Agencies                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employee-insurance-and-retirement-benefits/oversight-agencies/">Oversight Agencies
+</a></li>
+<li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/oversight-agencies/gic/" class="titlelink" >                            Group Insurance Commission                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/mtrs/" class="flag_link titlelink" >                            Massachusetts Teachers&#39; Retirement System (MTRS)                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/perac/" class="flag_link titlelink" >                            Public Employee Retirement Administration...                
+</a></span>
+</li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employee-insurance-and-retirement-benefits/status-changes/">                            Answers to FAQs                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employee-insurance-and-retirement-benefits/status-changes/">Answers to Frequently Asked Questions
+</a></li>
+<li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/employment-changes.html" class="titlelink" >                            Employment and Eligibility                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/retired-municipal-teacher.html" class="titlelink" >                            Retired Municipal Teacher                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/layoff-from-municipality.html" class="titlelink" >                            Layoff from Municipality                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/layoff-from-state.html" class="titlelink" >                            Layoff from State                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/leaving-municipal-service.html" class="titlelink" >                            Leaving Municipal Service                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/leaving-state-service.html" class="titlelink" >                            Leaving State Service                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/long-term-disability-frequently-asked-questions.html" class="titlelink" >                            Long Term Disability FAQs                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/medicare-1.html" class="titlelink" >                            Medicare                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/municipality-information/municipal-group-insurance-reform/" class="titlelink" >                            Municipal Group Insurance Reform Questions and Answers                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/new-municipal-member.html" class="titlelink" >                            New Municipal Member                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/status-changes/retirement.html" class="titlelink" >                            Retirement                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employee-insurance-and-retirement-benefits/municipality-information/">                            Municipality Information                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employee-insurance-and-retirement-benefits/municipality-information/">Municipality Information
+</a></li>
+<li class="subcat-li"><span class="lead_snippet"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/health-plans/municipal-enrollees/" class="flag_link titlelink" >                            Municipal Health Plans                </a></span>
+</li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/municipality-information/list-of-part-municipalities/" class="titlelink" >                            List of Participating Municipalities                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employee-insurance-and-retirement-benefits/retirement/">                            Retirement                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employee-insurance-and-retirement-benefits/retirement/">Retirement
+</a></li>
+<li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/mtrs/" class="flag_link titlelink" >                            Massachusetts Teachers&#39; Retirement System (MTRS)                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/smartplan/" class="flag_link titlelink" >                            Deferred Compensation SMART Plan                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/perac/" class="flag_link titlelink" >                            Public Employee Retirement Administration...                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="/veterans/benefits-and-services/family-benefits/pension-program.html" class="flag_link titlelink" >                            Veterans&#39; Pension Program                </a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/employment-equal-access-disability/employee-benefits-and-comp/post-retirement-employ-guidelines/" class="flag_link titlelink" >                            Post Retirement Employment                </a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/employee-insurance-and-retirement-benefits/employee-health-and-other-insurance-benefits/health-plans/retired-state-employees/" class="flag_link titlelink" >                            Retiree Health and Other Insurance Benefits (GIC)                </a></span>
+</li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/retirement/state-board-of-retirement-treasury/" class="titlelink" >                            State Board of Retirement (Treasury)                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/retirement/tax-information-dor/" class="titlelink" >                            Tax Information                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/anf/hearings-and-appeals/decisions/retirement-decisions/" class="flag_link titlelink" >                            Retirement Decisions                </a></span>
+</li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/">                            Coordinator Information                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/">Coordinator Information
+</a></li>
+<li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/locate-gic-coordinators.html" class="titlelink" >                            Locate GIC Coordinators                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/gic-coordinator-news/" class="titlelink" >                            GIC Coordinator News                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/ordering-supplies.html" class="titlelink" >                            Ordering Supplies                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/gic-regulations/" class="titlelink" >                            GIC Regulations                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/hrcms-and-umass-agency-proc/" class="titlelink" >                            HR-CMS and UMass Agency Procedures                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/municipality-procedures/" class="titlelink" >                            Municipality Procedures                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/offline-agency-procedures/" class="titlelink" >                            Offline Agency Procedures                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/coordinator-information/eap/" class="titlelink" >                            Employee Assistance Program (EAP)                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li><li class="category-drop-li">    <a class="nav_bubblelabel"  href="/anf/employee-insurance-and-retirement-benefits/manage-your-health/">                            Manage Your Health                </a>
+	<div class="subcat">
+    	<ul>
+            <li class="subcat-heading"><a aria-hidden="true" class="nav_bubblelabel" lang="en-us" href="/anf/employee-insurance-and-retirement-benefits/manage-your-health/">Manage Your Health
+</a></li>
+<li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/manage-your-health/health-conditions-and-concerns/" class="titlelink" >                            Health Conditions &amp; Concerns                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/manage-your-health/health-care-tips/" class="titlelink" >                            Health Care Tips                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/manage-your-health/health-care-trends/" class="titlelink" >                            Health Care Trends                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/manage-your-health/mental-health-and-substance-abuse-issues/" class="titlelink" >                            Mental Health and Substance Abuse Issues                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/manage-your-health/patient-safety-and-med-mistakes/" class="titlelink" >                            Patient Safety and Medical Mistakes                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/manage-your-health/prescription-drugs/" class="titlelink" >                            Prescription Drugs                </a></li>                                </ul>
+	</div><!-- .subcat -->
+</li>				 <li class="category-drop-li list-container-content"> 
+<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-key fa-stack-1x fa-inverse"></i></span><a class="nav_bubblelabel" href="#">                            Administration &amp; Finance Agency List                </a><div class="subcat">
+    <ul>	
+    	<li class="subcat-heading" aria-hidden="true">                            Administration &amp; Finance Agency List                </li>
+	<li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/atb/" class="titlelink" >                            Appellate Tax Board                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/bsb/" class="titlelink" >                            Bureau of the State House                </a></li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/csc/" class="titlelink" >                            Civil Service Commission                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="/dor" class="flag_link titlelink" >                            Dept. of Revenue (DOR)                </a></span>
+</li><li class="subcat-li"><a href="/anf/hearings-and-appeals/oversight-agencies/dala/" class="titlelink" >                            Division of Administrative Law Appeals                </a></li><li class="subcat-li"><a href="/anf/property-mgmt-and-construction/oversight-agencies/dcam/" class="titlelink" >                            Div. of Capital Asset Management &amp; Maintenance (DCAMM)                </a></li><li class="subcat-li"><a href="/anf/employee-insurance-and-retirement-benefits/oversight-agencies/gic/" class="titlelink" >                            Group Insurance Commission                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/hrd/" class="titlelink" >                            Human Resources Division                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/itd/" class="titlelink" >                            MassIT - Massachusetts Office of Information Technology                </a></li><li class="subcat-li"><a href="/anf/research-and-tech/oversight-agencies/lib/" class="titlelink" >                            State Library                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mddc/" class="titlelink" >                            Massachusetts Developmental Disabilities Council                </a></li><li class="subcat-li"><a href="/anf/employment-equal-access-disability/oversight-agencies/mod/" class="titlelink" >                            Massachusetts Office on Disability                </a></li><li class="subcat-li"><a href="/anf/budget-taxes-and-procurement/oversight-agencies/osd/" class="titlelink" >                            Operational Services Division                </a></li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/mtrs/" class="flag_link titlelink" >                            Mass Teachers Retirement Board                
+</a></span>
+</li><li class="subcat-li"><span class="lead_snippet"><a href="http://www.mass.gov/perac/" class="flag_link titlelink" >                            Public Employee Retirement Admin. Comm.                
+</a></span>
+</li>	</ul>
+        </div><!-- .subcat -->
+</li>				</ul>
+			</div><!-- .category -->
+			<div class="dd-drawer" role="presentation">
+			 			</div><!-- .dd-drawer -->
+    	</div><!-- .sub -->
+    
+    			</li>
+     </ul><!-- #topnav -->  
+   </div><!-- #nav -->
+</div><!-- .row .megadd --><!--googleon: index-->
+<div class="row breadcrumbs">
+<h2 class="accessibility">Breadcrumbs</h2>
+<ol>
+<li lang="en-us"><a href="/anf"> <i class="fa fa-home"></i> Home</a></li>
+<li lang="en-us"><a href="/anf/research-and-tech/"> Research &amp; Technology</a></li>
+<li lang="en-us"><a href="/anf/research-and-tech/it-serv-and-support/"> Information Technology Services</a></li>
+<li lang="en-us"><a href="/anf/research-and-tech/it-serv-and-support/application-serv/"> Application Services</a></li>
+<li lang="en-us"><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/"> Office of Geographic Information (MassGIS)</a></li>
+<li lang="en-us"><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/"> Datalayers</a></li><li ><span>DCR Roads and Trails</span></li>
+</ol>
+</div><!-- breadcrumbs -->
+<div class="row meta">
+	<h1 id="maincontent">                            MassGIS Data - DCR Roads and Trails                </h1>
+    	<div class="author">
+</div><!-- .author -->
+	</div><!-- .row .meta - page title -->
+
+<div class="row content pg_generic col93-dotted-vert">						
+
+
+<div class="col col9 introduction" role="main">
+					<div class="row"><div class="col col12 bodyfield">                			<h5><em>June 2015</em></h5><hr width="100%" /><table bgcolor="#ffffcc" border="1" cellpadding="5"><tbody><tr><td><a href="http://wsgw.mass.gov/data/gispub/shape/state/dcrtrails.zip">Download this layer</a> (6.4 MB)<br />(Shapefiles and ArcGIS 10 layer file)</td></tr></tbody></table><h4>Overview</h4><div class="ephoxsection-right">	<div class="thumb">			
+		<a class="thumbnail" href="/anf/images/itd/massgis/datalayers/dcrtrailsrds.png" title="Open the full size image.">
+			<img src="/anf/images/itd/massgis/datalayers/thumb-dcrtrailsrds.png" width="243" height="337" alt="DCR Roads and Trails Sample" />
+			<div>Click to see the full size image.</div>
+		</a>
+	</div><!-- .thumb -->
+</div><blockquote><p>The Massachusetts Department of Conservation and Recreation (DCR) – Division of State Parks and Recreation (DSPR) Roads and Trails datalayer contains all legal roads and trails (lines and point features) identified by DCR staff and consultants on DCR DSPR properties (as well as some of the Urban Parks; eventually all trails on these properties will be integrated into this dataset). Roads and trails on private and non-DCR public land were mapped if they connected to these roads and trails and should be used with permission and should not be used if posted.</p><p>These data are stored in two feature classes: <strong>DCR_ROADS_TRAILS_ARC</strong> and <strong>DCR_ROADS_TRAILS_PT</strong>.</p><p><strong>This updates the data released by MassGIS on 3/18/2014.</strong></p></blockquote><h4>Production</h4><blockquote><p>The dataset was developed during the years 2005 to 2015 in consultation with key DCR DSPR staff by private contractors using GPS receivers capable of two-meter accuracy (with post processing). Review of field collected data, editing, additional field work, DCR staff review and final processing was done by DCR DSPR Bureau of Forestry, Management Forestry staff headed by David Goodwin with production assistance from Amanda Lewis, Alicia Johnson and Bradford Wykoff.</p><p>Contractors (by DCR DSPR Management Forestry district) were:</p><ul type="disc"><li>Northern Berkshire – New England Forestry Consultants, Inc., Sean Libbey</li><li>Central Berkshire – REWC Land Management, Robert Collins</li><li>Southern Berkshire – The Kenerson Group, Michael Barry</li><li>Western Connecticut Valley – Land Stewardship, Inc., Nicholas Holland</li><li>Eastern Connecticut Valley – Land Stewardship, Inc., Nicholas Holland</li><li>Mid State - – New England Forestry Consultants, Inc., Sean Libbey and The Kenerson Group, Michael Barry</li><li>Northeast – Land Stewardship, Inc., Nicholas Holland</li><li>Southeast – Land Stewardship, Inc., Nicholas Holland</li></ul><p>MassGIS provided additional quality assurance on these layers.</p></blockquote><h4>Attributes</h4><blockquote><h4>Road and Trail Lines</h4><p>This feature class (<strong>DCR_ROADS_TRAILS_ARC</strong>) has attributes that describe the road and trail sections (parts of a road or trail that run between two intersection points), including:</p><p><strong>TYPE</strong>: The type of road or trail segment as follows:</p><p style=" margin-left: 20.0px;"><strong>Forest Road/Trail</strong> - A road or trail designed for vehicle use but may be used primarily for recreation or forestry purposes, generally unsuitable for two wheel drive highway vehicles</p><p style=" margin-left: 20.0px;"><strong>Administrative Road</strong> - Roads designed specifically for DCR use, not open to the public</p><p style=" margin-left: 20.0px;"><strong>Public Road</strong> - Roads designed for public use from a practical rather than legal perspective, generally suitable for two wheel drive highway vehicles.</p><p style=" margin-left: 20.0px;"><strong>Trail</strong> - Trails designed for foot and non-motorized uses.</p><p style=" margin-left: 20.0px;"><strong>Other</strong> - Any road or trail not included in the above categories; will include utility rights-of-way, private roads and driveways.</p><p><strong>ILLEGAL</strong>: The status of trail ('Y' = illegal and is not included in the public data release; 'N' = legal and are the only trails in the public data release)</p><p><strong>SURFACE</strong>: The predominant surface of the road or trail (Natural, Asphalt, Brick, Concrete, Processed Gravel, Bank Run Gravel, Vegetated, Stone and Oil, Packed Stone Dust, Pavers, Wood, Plastic, Other)</p><p><strong>WIDTH</strong>: The minimum width of the section of road or trail (0’-3’, 3’-5’, 5’-10’, 10’-15’, 15’-20’, 20+’)</p><p><strong>CONDITION</strong>: The condition of the road or trail (Good, Fair, Poor)</p><p><strong>VEHICACCES</strong>: The type of vehicle that can access the road or trail (car, 2WD truck, 4WD truck, ORV, none), for example, if a Forest Road/Trail is attributed as 4WD truck, it will not be suitable for a car or 2WD truck but will be suitable for a 4WD truck or ORV (if allowed)</p><p><strong>TRAIL_MARK</strong>: The quality or existence of trail marking (Good, Fair, Poor, None)</p><p><strong>COMMENTS</strong>: Notes taken in the field</p><p><strong>GPS_DATE</strong>: The day the data was collected, automatically collected by GPS unit</p><p><strong>GPS_TIME</strong>: The time the data was collected, automatically collected by GPS unit</p><p><strong>NAME</strong>: The name of road or trail, if known, added by DCR staff</p><p><strong>MILES</strong>:<em> </em>Length in miles of road or trail section, added by DCR staff</p><p><strong>METERS</strong>: Length in meters of road or trail section, added by DCR staff<em><br />&#160;</em></p><h4>Road and Trail Points</h4><p>This feature class (<strong>DCR_ROADS_TRAILS_PT</strong>) contains many different types of points related to assets along the roads and trails. Fields are filled in depending on the type of point (most of the fields are associated exclusively with one type). Fields in this feature class include:</p><p><strong>TYPE</strong>: The type of point (20 options), which determines which additional attributes require input as follows:</p><p style=" margin-left: 20.0px;"><strong>Trailhead</strong> - The access point for a trail/road, usually near a parking lot or public road</p><p style=" margin-left: 40.0px;"><strong>NUM</strong>: The number of trails (not roads) that start at this point<br /><strong>INTSIGNAGE</strong>: Trail name signage at this intersection (Good = you can tell the names of all trails at this intersection from the signage; Fair = you can tell the names of some of the trails; Poor = &#160;signage is misleading or confusing; None = no signage)<br /><strong>INT_NUMBER</strong>: Intersection number, if indicated on a sign on a tree/post/stake, to help people find where they are on the park map.</p><p style=" margin-left: 20.0px;"><strong>Dead End</strong> - [no additional fields]</p><p style=" margin-left: 20.0px;"><strong>Parking Area</strong></p><p style=" margin-left: 40.0px;"><strong>PRKNGCAPAC</strong>: Parking capacity - potential number of cars<br /><strong>PRKNGSURF</strong>: Parking surface (Asphalt, Processed gravel, Bank run gravel, Natural surface, Other)<br /><strong>PRKNGCOND</strong>: Parking lot condition (Good, Fair, Poor)<br style=" margin-left: 40.0px;" /><strong>PRKNGESIZE</strong>: Parking lot size in square feet</p><p style=" margin-left: 20.0px;"><strong>Gate</strong> - Any structure that is used to block vehicular access to the road or trail system</p><p style=" margin-left: 40.0px;"><strong>GATE_EFFEC</strong>: Does gate effectively block motorized vehicles? (true or false)<br style=" margin-left: 40.0px;" /><strong>GATE_OWNER</strong>: Owner of gate (DCR, other state agency, municipal, federal, private, non-profit, other)<br style=" margin-left: 40.0px;" /><strong>GATE_NUM</strong>: The gate number, if indicated<br style=" margin-left: 40.0px;" /><strong>GATE_POSTS</strong>: Gate post material (wood, treated, steel, well casing or heavy pipe, other)<br style=" margin-left: 40.0px;" /><strong>GATE_RFLCT</strong>: Is the gate reflective tape in good condition? (True/False)<br style=" margin-left: 40.0px;" /><strong>GATE_COND</strong>: Gate condition (Good = like new materials and treatment OK; Fair = has rust, deterioration or damage, but is repairable; Poor = failed, not economical to repair)<br style=" margin-left: 40.0px;" /><strong>GATE_HEIGH</strong>: Gate height to nearest ½ foot<br style=" margin-left: 40.0px;" /><strong>GATE_WIDTH</strong>: Gate width to nearest foot<em><br /></em><strong>GATE_TYPE</strong>: Gate type (steel channel – HD square pipe, steel pipe – normal round pipe, farm gate, wire or cable, treated timber, untreated timber, log, gravel pile, rip rap large rock pile, posts, jersey barrier, other)<em><br /></em><strong>GATE_CONFG</strong>: Gate configuration (single lane, two lanes without center post, two lanes with center post)</p><p style=" margin-left: 20.0px;"><strong>Road Bridge</strong></p><p style=" margin-left: 40.0px;"><strong>RBRIDOWNER</strong>: Bridge owner (DCR, other state agency, municipal, federal, private, non-profit, other)<br /><strong>RBRIDAMATE</strong>: Primary bridge abutment material (quarried stone, field stone, rubble, concrete, treated wood cribbing, untreated wood cribbing, other/combination)<br /><strong>RBRIDACOND</strong>: Bridge abutment condition (good, fair, poor)<br /><strong>RBRIDDWIDT</strong>: Bridge deck width to the nearest inch<br /><strong>RBRIDDLENG</strong>: Bridge deck length to the nearest foot<br /><strong>RBRIDDCOND</strong>: Bridge deck condition (good, fair, poor)<br /><strong>RBRIDDMATE</strong>: Primary material of bridge deck (untreated wood with running plank, untreated wood without running plank, treated wood with running plank, treated wood without running plank, glulam, steel plate, expanded steel, concrete, stone, other)<br /><strong>RBRIDFCROS</strong>: Name or type of feature the bridge crosses<br /><strong>RBRIDHRATI</strong>: AASHTO 44 “H” rating (&#60; 10, 10, 15, 20, 25, failed, unknown)<br /><strong>RBRIDOWIDT</strong>: Width of opening between abutments under bridge to nearest foot<br /><strong>RBRIDOHEIG</strong>: Height of opening measured from the feature crossed to the lowest point on the bridge to nearest foot<br /><strong>RBRIDSPAN</strong>: Distance to nearest foot of the actual bridge suspension<br /><strong>RBRIDSMATE</strong>: Bridge stringer material (steel, sawn treated wood, sawn untreated wood, treated roundwood, untreated roundwood, glulam, concrete, other)<br /><strong>RBRIDSNUM</strong>: Bridge stringer number<br /><strong>RBRIDSCOND</strong>: Bridge stringer condition (good, fair, poor)<br /><strong>RBRIDSSIZE</strong>: Bridge stringer dimension (H x W x L)<br /><strong>RBRIDYEARI</strong>: Year the bridge was installed</p><p style=" margin-left: 20.0px;"><strong>Road Ford</strong></p><p style=" margin-left: 40.0px;"><strong>RFORDFCROS</strong>: Name or type of feature road ford crosses<br /><strong>RFORDCOND</strong>: Overall condition of ford (good, fair, poor)<br /><strong>RFORDBTYPE</strong>: Bottom type of ford (ledge, stony, mud, gravel, concrete pad, log or timber, other)</p><p style=" margin-left: 20.0px;"><strong>Road Sign</strong></p><p style=" margin-left: 40.0px;"><strong>RSIGNTTEXT</strong>: Text of the sign or type of sign if too complex<br /><strong>RSIGNMATER</strong>: Primary sign material (steel painted, aluminum, plywood, treated timber, wood painted, wood routed, fiberglass, other)<br /><strong>RSIGNPOSTM</strong>: Primary sign post material (treated timber, steel post, painted or untreated wood, log post, other metal post, fiberglass post, tree, other)<br /><strong>RSIGNCOND</strong>: Condition of sign (good, fair, poor)</p><p style=" margin-left: 20.0px;"><strong>Trail Sign(s)/Kiosk</strong></p><p style=" margin-left: 40.0px;"><strong>TSIGNINFO</strong>: There is an informational sign (true, false)<br /><strong>TSIGNINTRP</strong>: There is an interpretive sign (true, false)<br /><strong>TSIGNREGUL</strong>: There is a regulatory sign (true, false)<br /><strong>TSIGNKIOSK</strong>: There is a kiosk structure (true, false)<br /><strong>TSIGNCOND</strong>: Condition of sign or kiosk (good, fair, poor)</p><p style=" margin-left: 20.0px;"><strong>Trail Structure/Erosion Control</strong> - A human-made structure associated with the trail that was constructed for the purpose of erosion control or to maintain the physical integrity of the trail</p><p style=" margin-left: 40.0px;"><strong>TSTRUSTYPE</strong>: Type of trail structure or erosion control (steps, cribbing, retaining wall, guardrail, drainage dip, waterbar, checkdam, turnpike, corduroy, switchback/climbing turn, other)<br /><strong>TSTRUMATER</strong>: Material of structure (rock, mineral soil, untreated wood, treated wood, metal, plastic, other)<br /><strong>TSTRUSCOND</strong>: Condition of the structure (good, fair, poor)<br /><strong>TSTRUSFUNC</strong>: Functional condition of the structure (good, fair, poor)</p><p style=" margin-left: 20.0px;"><strong>Trail Stream Crossing</strong> - Where a trail crosses a water body</p><p style=" margin-left: 40.0px;"><strong>TSTRXCTYPE</strong>: Type of stream crossing (bridge, boardwalk, culvert, unimproved ford, improved ford, bog bridge, other)<br /><strong>TXTRXMATER</strong>: Material of stream crossing (rock, untreated wood, treated wood, metal, plastic, other)<br /><strong>TSTRXSCOND</strong>: Condition of the structure (good, fair, poor)<br /><strong>TSTRXCCOND</strong>: Condition of the crossing (good, fair, poor)<br /><strong>TXTRXWTYPE</strong>: Type of water body crossed (stream, wetland, spring, seasonal runoff, other)<br /><strong>TXTRXLENGT</strong>: Length of crossing to the nearest foot</p><p style=" margin-left: 20.0px;"><strong>Trail Meets Utility Right-Of-Way</strong></p><p style=" margin-left: 40.0px;"><strong>TUTIXUTYPE</strong>: Type of utility line (gas, electric, phone, other)<br style=" margin-left: 40.0px;" /><strong>TUTIXCONFG</strong>: Configuration of utility line (above ground, below ground)<br style=" margin-left: 40.0px;" /><strong>TUTIXIMPCT</strong>: Does the trail crossing negatively impact the utility line? (true, false)</p><p style=" margin-left: 20.0px;"><strong>Trail Crosses Stone Wall</strong> - [no additional fields]</p><p style=" margin-left: 20.0px;"><strong>Trail Crosses DCR Boundary</strong></p><p style=" margin-left: 40.0px;"><strong>TBNDXSPDCR</strong>: Is there a DCR property sign present? (true, false)<br /><strong>TBNDXSPPRI</strong>: Is there a private property sign present? (true, false)</p><p style=" margin-left: 20.0px;"><strong>Building </strong>- [no additional fields]</p><p style=" margin-left: 20.0px;"><strong>Shelter</strong> - [no additional fields]</p><p style=" margin-left: 20.0px;"><strong>Picnic Table/Area</strong></p><p style=" margin-left: 40.0px;"><strong>PICNINUM</strong>: Number of picnic tables in this picnic area<br style=" margin-left: 40.0px;" /><strong>PICNIMATER</strong>: Primary material of the picnic table (Wood, Plastic, Metal, Stone, Concrete, Other)</p><p style=" margin-left: 20.0px;"><strong>Bench(es)</strong></p><p style=" margin-left: 40.0px;"><strong>BENCHNUM</strong>: Number of benches<br style=" margin-left: 40.0px;" /><strong>BENCHMATER</strong>: Primary material of benches (Wood, Plastic, Metal, Stone, Concrete, Other)</p><p style=" margin-left: 20.0px;"><strong>Vista</strong> - [no additional fields]</p><p style=" margin-left: 20.0px;"><strong>Recreational Site</strong> - [no additional fields]</p><p style=" margin-left: 20.0px;"><strong>Noteworthy Natural Feature</strong> - [no additional fields]</p><p>&#160;</p><p>The following fields are available for all point feature types:</p><p><strong>COMMENTS</strong>: Notes taken in the field</p><p><strong>GPS_DATE</strong>: The day the data was collected, automatically collected by GPS unit</p><p><strong>GPS_TIME</strong>: The time the data was collected, automatically collected by GPS unit<br />&#160;</p></blockquote><h4>Maintenance</h4><blockquote><p>DCR DSPR will provide any updates to MassGIS</p></blockquote><hr /><p><em>Last Updated 6/23/2015</em></p>                </div></div><!-- .row -->								
+
+
+
+<div class="row">
+    <div class="col col12">
+		<div class="form_embed feedback" aria-live="polite" aria-relevant="all">
+<br />
+<script type="text/javascript" src="https://www.formstack.com/forms/js.php?nojquery=1&no_style=1&form=1727151&viewkey=7LrN561zPS&style_version=v3&referrer=http://www.mass.gov%2fanf%2fresearch-and-tech%2fit-serv-and-support%2fapplication-serv%2foffice-of-geographic-information-massgis%2fdatalayers%2fdcrtrails.html&site=anf&content_author=itd&child_content_author=&jsonp"></script>    		<script type='text/javascript'>if (typeof $ == 'undefined' && jQuery){ $ = jQuery}</script>
+		</div>
+	</div><!-- .col .col12 -->
+</div><!-- .row -->
+			</div><!-- .col .introduction - center column -->
+
+<div class="col col3 resources" role="complementary">
+<h2 class="accessibility">Complementary Content</h2>
+<div class="module">	        <div class="callout" >
+                            			<p>
+<a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/" class="flag_link " >
+
+
+<span class="img_wrapper"><img src="/anf/images/itd/massgis/massgis-logo-204.png" alt="MassGIS Logo" /></span>
+
+</a></p><hr /><p><strong><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/layerlist.html" class="titlelink" >                            MassGIS Datalayers                </a></strong></p><hr /><p><strong><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/online-mapping/" class="titlelink" >Online Mapping</a></strong></p><hr /><p><strong><a href="http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/mgis-news.html">What's New</a></strong></p><hr /><p><strong><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/about-massgis/" class="titlelink" >                            About MassGIS                </a></strong></p><hr /><p><strong><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/municipal-gis/" class="titlelink" >                            Municipal GIS                </a></strong></p><hr /><p><strong><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/gis-resources/" class="titlelink" >GIS Resources</a></strong></p><hr /><p><strong><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/standards/" class="titlelink" >Standards</a></strong></p><p>&#160;</p><hr /><p><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/faqs.html" class="titlelink" >MassGIS FAQs</a></p><p><strong>Contact MassGIS<br /></strong><a href="mailto:massgismail@state.ma.us?subject=MassGIS">Email MassGIS</a><br /><span style=" font-size: 10px;"><a href="/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/about-massgis/lender-property-nfo.html" class="titlelink" >MassGIS Property Tax Information</a></span></p>                            </div><!-- #pagedescription -->
+</div><!-- .module --></div><!-- .col - right column  -->
+					</div><!-- .row .col363-dotted-verts -->
+  <!--	END PAGE CONTENT	-->
+				<div class="row footer" role="contentinfo">
+                  <div class="col col5">
+                	<p id="copyright" class="rwd-small">&copy; 2017  Commonwealth of Massachusetts. <br />Mass.Gov&reg; is a registered service mark of the Commonwealth of Massachusetts.</p>  	
+                  </div><!-- .col .col5 -->
+                  <div class="col col7">
+    			  <ul class="rwd-ulhorizontal rwd-right"><li><a href="/anf/utility/site-policies.html" class="titlelink" >                            Site Policies                </a></li><li><a href="/anf/utility/contact-us.html" class="titlelink" >                            Contact Us                </a></li><li><a href="/anf/public-records-requests.html" class="titlelink" >                            Public Records Requests                </a></li></ul><!-- .rwd-ulhorizontal .rwd-right -->				  </div><!-- .col .col6 -->
+    			</div><!-- .row .footer -->	
+			</div><!-- .container -->
+		</div><!-- .outer-container -->
+		<script src="/resources/scripts/vendor/plugins.js"></script>
+		<script src="/resources/scripts/app.js"></script>
+		<script src="/resources/scripts/megadd.js"></script>
+		<script src="/resources/scripts/responsive.js"></script>
+		<script type="text/javascript" src="/resources/scripts/translate.js"></script>
+<script>
+	jQuery(document).ready(function ($) {
+	// 20130930JC for C1008603 on 10/2/13
+	// replacing 3rd test: .ma-list-cycle (because all sassy lists are static) with blog widget
+	yepnope([
+		{
+		//test for presence of slideshow. slideshow css included in <head> to avoid repaint
+			test: $('.ma_slideshow').length,
+			yep: ['/resources/scripts/vendor/jquery.cycle.all.js',
+					'/resources/scripts/slideshow.js'],
+			callback: function(url, result, key) {
+				if ( url.match('slideshow.js') ) {
+				$('body').addClass('js');
+				$('.ma_slideshow').mAss( {timeout: 7000} );
+				//  ER181 - slideshow accessibility enhancement - 9/26/2013 YG
+				// display the slideshow control if JS is on.
+				$('.screenreader').attr('aria-hidden','false');
+				$('.slides_control').attr('aria-hidden','false');
+				// aria polite on slides container
+				$('h2.slideshow').focusin(function () {
+					$('div.ma_slideshow  div.slides ul').attr('aria-live', 'polite');
+				});
+				$('.screenreader button').click(function () {
+					// pause the slide show
+					$('.ma_slideshow div.slides > ul').cycle('pause');
+						// turn off aria-live
+						$('div.ma_slideshow  div.slides ul').attr('aria-live', 'off');
+					// make all slides visible
+					$('.ma_slideshow div.slides > li').removeAttr('style');
+					// hide contole below the slideshow
+					$('.ma_slideshow div.slides_control').Attr('aria-hidden','true');
+					// move role="region" from div.ma_lideshow to div.slides ul to prevent a screen reader to read entire div.ma_lideshow whenever slides change.
+					$('.ma_slideshow').removeAttr('role');
+					$('.ma_slideshow div.slides ul').Attr('role','region');
+				});
+				//   end - ER181
+					}
+			}
+		},
+		{
+		//test for presence of horizontal scrolling slideshow. slideshow css included in <head> to avoid repaint
+			test: $('.ma_hshow').length,
+			yep: ['/resources/scripts/vendor/jquery.cycle.all.js',
+					'/resources/scripts/horizontal-slideshow.js'],
+			callback: function(url, result, key) {
+				if ( url.match('horizontal-slideshow.js') ) {
+				$('body').addClass('js');
+				$('.ma_hshow').massGov( {timeout: 0} );
+				}
+			}
+		},
+		{
+		//test for presence of blog widget. blog widget css included in <head> to avoid repaint
+			test: $('.mablog-rss').length,
+			yep: ['/resources/scripts/blog-feed.js'],
+			callback: function(url, result, key) {
+				if ( url.match('blog-feed.js') ) {
+					$('body').addClass('js');
+					$('.mablog-rss').makeFeed(
+						$('.mablog-rss').data('title'),
+						$('.mablog-rss').data('agency'),
+						$('.mablog-rss').data('display')
+					);
+				}
+			}
+		},
+		{
+			//test for presence of analytics
+			test: window._gaq,
+			yep: ['/resources/scripts/tracking.js'],
+			callback: function(url, result, key) {
+				if ( url.match('tracking.js') ) {
+				// goog.PNs81 Async Doc
+				$('a[href]').each(function(){
+					$(this).trackPls();
+				});
+				}
+			}
+		},
+		{
+		//C1010357: 4-16-2014 ER5 JC
+		//test for presence of share widget
+		test: $('.magov-share').length,
+		yep: ['/resources/scripts/share.js'],
+		callback: function(url, result, key) {
+				if ( url.match('share.js') ) {
+				$('body').addClass('js');
+				$('.magov-share').maShare();
+				}
+			}
+		},
+		{
+			// tabbed module 20141217 ER 112 JC
+			//test for presence of tabbed module class
+			test: $('.ma-tabs').length,
+			yep: ['/resources/scripts/tabs.js'],
+			callback: function(url, result, key) {
+				if (url.match('tabs.js')) {
+					$('body').addClass('js');
+					$('.ma-tabs').tabs();
+				}
+			}
+		},
+		{
+            //test for presence of <details>, polyfill with JS where not supported - ER186 JC
+            test: $('details').length,
+            yep: ['/resources/scripts/vendor/jquery.details.min.js'],
+            callback: function(url, result, key) {
+                if ( url.match('jquery.details.min.js') ) {
+
+                // Detect whether `<details>`/`<summary>` are natively supported
+                  console.log($.fn.details.support ? 'Details Element: Native support' : 'Details Element: No native support');
+                // Conditionally add a classname to the `html` element, based on native support
+                 $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+
+                $('details').details();
+            }
+          }
+        }						
+		
+		]);
+	}); //noConflict()
+</script>
+	</body>
+</html>

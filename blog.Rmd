@@ -8,9 +8,32 @@ output: html_document
 ```{r}
 library(tidyverse)
 library(macleish)
+library(rvest)
+library(rgdal)
+library(rgeos)
 ```
 
 ```{r}
 names(macleish_layers)
 ```
 
+```{r}
+url <- "http://wsgw.mass.gov/data/gispub/shape/state/biketrails_arc.zip"
+download.file(url, destfile = basename(url))
+unzip("biketrails_arc.zip", exdir = "biketrails")
+```
+```{r}
+url2 <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/dcrtrails.html"
+
+download.file(url2, destfile = basename(url2))
+```
+
+```{r}
+unzip("dcrtrails.zip", exdir = "Dcrtrails")
+```
+```{r}
+unzip("colleges.zip", exdir = "colleges")
+```
+```{r}
+unzip("contours250k.zip", exdir = "Contours")
+```
