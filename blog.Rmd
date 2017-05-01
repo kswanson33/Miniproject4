@@ -18,6 +18,7 @@ names(macleish_layers)
 ```
 
 ```{r}
+##Getting trail data
 url1 <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/dcrtrails.html"
 download.file(url1, destfile = basename(url1))
 unzip("dcrtrails.zip", exdir = "dcrtrails")
@@ -42,14 +43,46 @@ summary(dcr_trails)
 ```
 
 ```{r}
+##Getting college data
+url_colleges<- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/colleges.html"
+download.file(url_colleges, destfile = basename(url_colleges))
 unzip("colleges.zip", exdir = "colleges")
 ```
 
 ```{r}
-unzip("contours250k.zip", exdir = "Contours")
+colleges <- path.expand("colleges")
+list.files(colleges)
+```
+```{r}
+ogrListLayers(colleges)
+```
+```{r}
+ogrInfo(colleges, layer = "COLLEGES_PT")
+```
+```{r}
+colleges_loc<- readOGR(colleges, "COLLEGES_PT")
+summary(colleges_loc)
 ```
 
 ```{r}
+##Getting contour data
+url_contour <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/hp250k.html"
+download.file(url_contour, destfile = basename(url_contour))
+unzip("contours250k.zip", exdir = "contours")
+```
 
+```{r}
+contours <- path.expand("contours")
+list.files(contours)
+```
+```{r}
+ogrListLayers(contours)
+```
+```{r}
+ogrInfo(contours, layer = "CONTOURS250K_ARC")
+```
+```{r}
+contour_mass<- readOGR(contours, "CONTOURS250K_ARC")
+summary(contour_mass)
 ```
 
