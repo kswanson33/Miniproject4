@@ -86,20 +86,21 @@ contour_mass<- readOGR(contours, "CONTOURS250K_ARC")
 summary(contour_mass)
 ```
 
+##Transforms to coordinates that work in leaflet
 ```{r}
-plot(dcr_trails)
+dcr_trails <- spTransform(dcr_trails, CRS("+init=epsg:4326"))
+contour_mass <- spTransform(contour_mass, CRS("+init=epsg:4326"))
+colleges_loc <- spTransform(colleges_loc, CRS("+init=epsg:4326"))
 ```
-
-```{r}
-dcr_trails_4326 <- spTransform(dcr_trails, CRS("+init=epsg:4326"))
-summary(dcr_trails_4326)
-```
-
 
 ```{r}
 library(leaflet)
 leaflet() %>%
   addTiles() %>%
-  addPolylines(data = dcr_trails_4326)
+  addMarkers(data = colleges_loc)
+```
+
+```{r}
+
 ```
 
