@@ -86,3 +86,20 @@ contour_mass<- readOGR(contours, "CONTOURS250K_ARC")
 summary(contour_mass)
 ```
 
+```{r}
+plot(dcr_trails)
+```
+
+```{r}
+dcr_trails_4326 <- spTransform(dcr_trails, CRS("+init=epsg:4326"))
+summary(dcr_trails_4326)
+```
+
+
+```{r}
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%
+  addPolylines(data = dcr_trails_4326)
+```
+
