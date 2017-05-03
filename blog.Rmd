@@ -26,20 +26,12 @@ unzip("dcrtrails.zip", exdir = "dcrtrails")
 
 ```{r}
 trails <- path.expand("dcrtrails")
-list.files(trails)
-```
-
-```{r}
-ogrListLayers(trails)
-```
-
-```{r}
-ogrInfo(trails, layer = "DCR_ROADS_TRAILS_ARC")
+#ogrListLayers(trails)
 ```
 
 ```{r}
 dcr_trails <- readOGR(trails, "DCR_ROADS_TRAILS_ARC")
-summary(dcr_trails)
+#summary(dcr_trails)
 ```
 
 ```{r}
@@ -51,17 +43,12 @@ unzip("colleges.zip", exdir = "colleges")
 
 ```{r}
 colleges <- path.expand("colleges")
-list.files(colleges)
+#ogrListLayers(colleges)
 ```
-```{r}
-ogrListLayers(colleges)
-```
-```{r}
-ogrInfo(colleges, layer = "COLLEGES_PT")
-```
+
 ```{r}
 colleges_loc<- readOGR(colleges, "COLLEGES_PT")
-summary(colleges_loc)
+#summary(colleges_loc)
 ```
 
 ```{r}
@@ -73,27 +60,23 @@ unzip("contours250k.zip", exdir = "contours")
 
 ```{r}
 contours <- path.expand("contours")
-list.files(contours)
-```
-```{r}
-ogrListLayers(contours)
-```
-```{r}
-ogrInfo(contours, layer = "CONTOURS250K_ARC")
-```
-```{r}
-contour_mass<- readOGR(contours, "CONTOURS250K_ARC")
-summary(contour_mass)
+#ogrListLayers(contours)
 ```
 
-##Transforms to coordinates that work in leaflet
 ```{r}
+contour_mass<- readOGR(contours, "CONTOURS250K_ARC")
+#summary(contour_mass)
+```
+
+```{r}
+##Transforming to coordinates that work in leaflet
 dcr_trails <- spTransform(dcr_trails, CRS("+init=epsg:4326"))
 contour_mass <- spTransform(contour_mass, CRS("+init=epsg:4326"))
 colleges_loc <- spTransform(colleges_loc, CRS("+init=epsg:4326"))
 ```
 
 ```{r}
+##Demonstration
 library(leaflet)
 leaflet() %>%
   addTiles() %>%
@@ -101,6 +84,71 @@ leaflet() %>%
 ```
 
 ```{r}
+boundary = spTransform(macleish_layers[["boundary"]], CRS("+init=epsg:4326"))
+```
 
+```{r}
+##Reducing shapefiles to only the data we need
+contour_intersect <- gIntersection(boundary, contour_mass)
+```
+
+```{r}
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%
+  addPolylines(data = contour_intersect)
+```
+
+```{r}
+library(sp)
+coords <- rbind(c(42.458299, -72.710239),
+                c(42.457476, -72.605017),
+                c(42.316596, -72.601298),
+                c(42.312746, -72.709123),
+                c(42.458299, -72.710239)) %>%
+  as.data.frame() %>%
+  rename(lat = V1, lon = V2)
+
+#P1 <- Polygon(coords)
+#Ps1 <- SpatialPolygons(list(Polygons(list(P1), ID = "a")))
+#proj4string(Ps1) <- CRS("+init=epsg:4326")
+#proj4string=CRS("+init=espg:4326 +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
+```
+
+```{r}
+polygon <- coords %>%
+  select(lon,lat) %>%
+  Polygon()
+```
+
+```{r}
+sp_polygon <- SpatialPolygons(list(Polygons(list(polygon), ID = "a")))
+```
+
+```{r}
+proj4string(sp_polygon) <- CRS("+init=epsg:4326")
+```
+
+
+```{r}
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%
+  addPolylines(data = sp_polygon)
+```
+
+```{r}
+contours_relevant <- gIntersection(sp_polygon, contour_mass)
+```
+
+```{r}
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%
+  addPolylines(data = contours_relevant)
+```
+
+```{r}
+trails_relevant <- gIntersection(Ps1, dcr_trails)
 ```
 
