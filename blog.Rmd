@@ -97,10 +97,15 @@ colleges_loc <- spTransform(colleges_loc, CRS("+init=epsg:4326"))
 library(leaflet)
 leaflet() %>%
   addTiles() %>%
-  addMarkers(data = colleges_loc)
+  addMarkers( data = colleges_loc, 
+    popup = "+init=epsg:4326")
 ```
 
 ```{r}
+leaflet()%>%
+  addTiles()%>%
+  addMarkers(data = contour_mass)
+```
 
 ```
 
