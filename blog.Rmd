@@ -108,11 +108,6 @@ coords <- rbind(c(42.458299, -72.710239),
                 c(42.458299, -72.710239)) %>%
   as.data.frame() %>%
   rename(lat = V1, lon = V2)
-
-#P1 <- Polygon(coords)
-#Ps1 <- SpatialPolygons(list(Polygons(list(P1), ID = "a")))
-#proj4string(Ps1) <- CRS("+init=epsg:4326")
-#proj4string=CRS("+init=espg:4326 +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
 ```
 
 ```{r}
@@ -142,13 +137,29 @@ contours_relevant <- gIntersection(sp_polygon, contour_mass)
 ```
 
 ```{r}
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%
-  addPolylines(data = contours_relevant)
+summary(contour_mass)
 ```
 
 ```{r}
-trails_relevant <- gIntersection(Ps1, dcr_trails)
+summary(contours_relevant)
+```
+
+```{r}
+trails_relevant <- gIntersection(sp_polygon, dcr_trails)
+```
+
+```{r}
+library(leaflet)
+mac_pal <- colorBin(palette = "Reds", domain = boundary$Shape_Leng)
+leaflet() %>%
+  addTiles() %>%
+  addPolylines(data = trails_relevant) %>%
+  addPolylines(data = contours_relevant, weight = 1) %>%
+  addPolygons(data = boundary, color = ~mac_pal(Shape_Leng)) %>%
+  addMarkers(data = colleges_loc)
+```
+
+```{r}
+
 ```
 
