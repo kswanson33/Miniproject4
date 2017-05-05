@@ -14,10 +14,6 @@ library(rgeos)
 ```
 
 ```{r}
-names(macleish_layers)
-```
-
-```{r}
 ##Getting trail data
 url1 <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/dcrtrails.html"
 download.file(url1, destfile = basename(url1))
@@ -88,18 +84,6 @@ boundary = spTransform(macleish_layers[["boundary"]], CRS("+init=epsg:4326"))
 ```
 
 ```{r}
-##Reducing shapefiles to only the data we need
-contour_intersect <- gIntersection(boundary, contour_mass)
-```
-
-```{r}
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%
-  addPolylines(data = contour_intersect)
-```
-
-```{r}
 library(sp)
 coords <- rbind(c(42.458299, -72.710239),
                 c(42.457476, -72.605017),
@@ -142,10 +126,6 @@ summary(contour_mass)
 
 ```{r}
 summary(contours_relevant)
-```
-
-```{r}
-trails_relevant <- gIntersection(sp_polygon, dcr_trails)
 ```
 
 ```{r}
@@ -208,31 +188,53 @@ trail1_df <- rbind(c(42.320327, -72.640085),
   rename(lat = V1, lon = V2)
 ```
 
-write function to convert df of coordinates to spatial lines df
+
 ```{r}
+# write function to convert df of coordinates to spatial lines df
 df_to_sp <- function(trail_df) {
   trail_df %>%
-  # reverse order of columns
-  select(lon, lat) %>%
-  Line() %>%
-  list() %>%
-  Lines(ID = "a") %>%
-  list() %>%
-  SpatialLines()
+    select(lon, lat) %>%
+    Line() %>%
+    list() %>%
+    Lines(ID = "a") %>%
+    list() %>%
+    SpatialLines()
 }
 ```
 
+
+
 ```{r}
-trail1_sp_fn <- df_to_sp(trail1_df)
+trail1_sp <- df_to_sp(trail1_df)
 ```
 
 ```{r}
-proj4string(trail1_sp_fn) <- CRS("+init=epsg:4326")
+proj4string(trail1_sp) <- CRS("+init=epsg:4326")
+```
+
+```{r}
+summary(trail1_sp)
 ```
 
 ```{r}
 leaflet() %>%
   addTiles() %>%
-  addPolylines(data = trail1_sp_fn)
+  addPolylines(data = trail1_sp)
+```
+
+```{r}
+trail1_elevation <- gIntersection(trail1_sp, contour_mass)
+```
+
+##figure out how to retain elevation data from contour_mass
+```{r}
+mac_pal <- colorBin(palette = "Reds", domain = boundary$Shape_Leng)
+
+leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(data = trail1_elevation, radius = 4, stroke = FALSE, fillOpacity = 1) %>%
+  addPolylines(data = trail1_sp, opacity = .5) %>%
+  addPolylines(data = contours_relevant, weight = .5) %>%
+  addPolygons(data = boundary, color = ~mac_pal(Shape_Leng))
 ```
 
