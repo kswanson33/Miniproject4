@@ -4,8 +4,14 @@ author: "Kendra Swanson, Margaret Perry"
 date: "April 30, 2017"
 output: html_document
 ---
+##Problem statement
+In this set of code we are mapping the contour map of Massuchuttes as well as the boundry of machleaish and a map of the placement of the colleges in Massachusets. With these maps we are hope to display to different types of trails one stright forward with little change in elevation, and another that is longer and more sencic and more variations in elevation.
+Plan: 
+-build a bunch of paths
+-find elevation data
+-pick easiest one and hardest one
 
-```{r}
+```{r, message = FALSE}
 library(tidyverse)
 library(macleish)
 library(rvest)
@@ -13,62 +19,58 @@ library(rgdal)
 library(rgeos)
 ```
 
-```{r}
-names(macleish_layers)
-```
-
-```{r}
+```{r, message = FALSE}
 ##Getting trail data
 url1 <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/dcrtrails.html"
 download.file(url1, destfile = basename(url1))
 unzip("dcrtrails.zip", exdir = "dcrtrails")
 ```
 
-```{r}
+```{r, message = FALSE}
 trails <- path.expand("dcrtrails")
 #ogrListLayers(trails)
 ```
 
-```{r}
+```{r, message = FALSE}
 dcr_trails <- readOGR(trails, "DCR_ROADS_TRAILS_ARC")
 #summary(dcr_trails)
 ```
 
-```{r}
+```{r, message = FALSE}
 ##Getting college data
 url_colleges<- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/colleges.html"
 download.file(url_colleges, destfile = basename(url_colleges))
 unzip("colleges.zip", exdir = "colleges")
 ```
 
-```{r}
+```{r, message = FALSE}
 colleges <- path.expand("colleges")
 #ogrListLayers(colleges)
 ```
 
-```{r}
+```{r, message = FALSE}
 colleges_loc<- readOGR(colleges, "COLLEGES_PT")
 #summary(colleges_loc)
 ```
 
-```{r}
+```{r, message = FALSE}
 ##Getting contour data
 url_contour <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/hp250k.html"
 download.file(url_contour, destfile = basename(url_contour))
 unzip("contours250k.zip", exdir = "contours")
 ```
 
-```{r}
+```{r, message = FALSE}
 contours <- path.expand("contours")
 #ogrListLayers(contours)
 ```
 
-```{r}
+```{r, message = FALSE}
 contour_mass<- readOGR(contours, "CONTOURS250K_ARC")
 #summary(contour_mass)
 ```
 
-```{r}
+```{r, message = FALSE}
 ##Transforming to coordinates that work in leaflet
 dcr_trails <- spTransform(dcr_trails, CRS("+init=epsg:4326"))
 contour_mass <- spTransform(contour_mass, CRS("+init=epsg:4326"))
@@ -87,6 +89,12 @@ leaflet() %>%
 
 
 ```{r}
+
+boundary <- spTransform(macleish_layers[["boundary"]], CRS("+init=epsg:4326"))
+```
+
+```{r}
+# Making a boundary polygon to use to subset contour data
 library(sp)
 coords <- rbind(c(42.458299, -72.710239),
                 c(42.457476, -72.605017),
@@ -97,47 +105,43 @@ coords <- rbind(c(42.458299, -72.710239),
   rename(lat = V1, lon = V2)
 ```
 
-```{r}
+```{r, message = FALSE}
 polygon <- coords %>%
   select(lon,lat) %>%
   Polygon()
 ```
 
-```{r}
+```{r, message = FALSE}
 sp_polygon <- SpatialPolygons(list(Polygons(list(polygon), ID = "a")))
 ```
 
-```{r}
+```{r, message = FALSE}
 proj4string(sp_polygon) <- CRS("+init=epsg:4326")
 ```
 
-
-```{r}
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%
-  addPolylines(data = sp_polygon)
-```
-
-```{r}
+```{r, message = FALSE}
+# Subsetting contour data
 contours_relevant <- gIntersection(sp_polygon, contour_mass)
 ```
 
-```{r}
+```{r, message = FALSE}
 summary(contour_mass)
 ```
 
-```{r}
+```{r,message = FALSE}
 summary(contours_relevant)
 ```
 
-```{r}
+```{r, message = FALSE}
 trails_relevant <- gIntersection(sp_polygon, dcr_trails)
 ```
 
-```{r}
+```{r, message = FALSE}
 library(leaflet)
 mac_pal <- colorBin(palette = "Reds", domain = boundary$Shape_Leng)
+
+```
+```{r}
 leaflet() %>%
   addTiles() %>%
   addPolylines(data = contours_relevant, weight = 1)%>%
@@ -145,13 +149,11 @@ leaflet() %>%
   addMarkers(data = colleges_loc, popup = "+init=epsg:4326")%>%
   addTiles()%>%
   addMarkers(data = macleish_layers[["buildings"]], 
-             popup = ~ name, group = "Structures")
-
+             popup = ~ name, group = "Structures")%>%
   addPolylines(data = trails_relevant) %>%
   addPolylines(data = contours_relevant, weight = 1) %>%
   addPolygons(data = boundary, color = ~mac_pal(Shape_Leng)) %>%
   addMarkers(data = colleges_loc)
-
 ```
 
 ```{r}
@@ -168,11 +170,9 @@ leaflet() %>%
   addMarkers(data = macleish_layers[["buildings"]], 
              popup = ~ name, group = "Structures")
 ```
-Plan: 
--build a bunch of paths
--find elevation data
--pick easiest one and hardest one
+
 ```{r}
+# Creating a possible trail from Smith to Macleish
 trail1_df <- rbind(c(42.320327, -72.640085),
                    c(42.324335, -72.648490),
                    c(42.331041, -72.652168),
@@ -216,36 +216,38 @@ trail1_df <- rbind(c(42.320327, -72.640085),
   rename(lat = V1, lon = V2)
 ```
 
-write function to convert df of coordinates to spatial lines df
+
 ```{r}
+# Function to convert df of coordinates to spatial lines df
 df_to_sp <- function(trail_df) {
   trail_df %>%
-  # reverse order of columns
-  select(lon, lat) %>%
-  Line() %>%
-  list() %>%
-  Lines(ID = "a") %>%
-  list() %>%
-  SpatialLines()
+    select(lon, lat) %>%
+    Line() %>%
+    list() %>%
+    Lines(ID = "a") %>%
+    list() %>%
+    SpatialLines()
 }
 ```
 
 ```{r}
-trail1_sp_fn <- df_to_sp(trail1_df)
+trail1_sp <- df_to_sp(trail1_df)
 ```
 
 ```{r}
-proj4string(trail1_sp_fn) <- CRS("+init=epsg:4326")
+# Projecting trail 1
+proj4string(trail1_sp) <- CRS("+init=epsg:4326")
 ```
 
 ```{r}
-leaflet() %>%
-  addTiles() %>%
-  addPolylines(data = trail1_sp_fn)
-
+# Finding where trail crosses contour lines
+trail1_elevation <- gIntersection(trail1_sp, contour_mass)
 ```
 
+
+
 ```{r}
+# Creating a possible trail from Smith to Macleish
 trail2_df <- rbind(c(42.446700,-72.680977),
                    c(42.444812,-72.680676),
                    c(42.442813,-72.681880),
@@ -334,11 +336,17 @@ trail2_sp_fn <- df_to_sp(trail2_df)
 ```{r}
 proj4string(trail2_sp_fn) <- CRS("+init=epsg:4326")
 ```
-
 ```{r}
+##Final Map (inclusive)
 leaflet() %>%
   addTiles() %>%
   addPolylines(data = trail2_sp_fn)%>%
-  addPolylines(data = trail1_sp_fn)
+  addPolylines(data = trail1_sp_fn)%>%
+    addCircleMarkers(data = trail1_elevation, radius = 4, stroke = FALSE, fillOpacity = 1) %>%
+  addPolylines(data = trail1_sp, opacity = .5) %>%
+  addPolylines(data = contours_relevant, weight = .5) %>%
+  addPolygons(data = boundary, color = ~mac_pal(Shape_Leng), weight = 1.5, opacity = .8)
 
 ```
+##Suggestions and Analysis
+In this mini project we map two main routes for those looking to go the macleish field station by bike. These trails present two completely different levels of difficulty and length. The first that appears in a relatively straight line is the easier less scenic route as well as the shorter of the two. The longer route that looks more of a semi circle is much more scenic and takes several different bike routes. it will also  take the bikers by a lake, several rivers, a hill, and a fairly nice chapel. The downside to the second trial is that this trail will likely take much longer, possibly around an hour more depending on the skill level of the bikers. With this information I suggest that Smith  present bike routes like these or any other on their website for those who are unsure of possible bike routes. This would allow easier access to the macleish and may encourage more people  to visit the field station. It would also allow people to arrange their day around the trip and make as much or as little commitment to travel as they would like.  It would be very easy to implement this just simply an edit on the website, but if they would like to take it one step further they could hold biking groups to go out there  together and make a day or weekend of the trip. Smith could get the times on each route taken to be presented on the website, and get more information to gage difficulty. By posting this information along with the routes on the website would allow groups and students to plan their trips more accordingly. For project I wish were able to present more information on the difficulty of each route, and were able to keep more of the elevation data from the contour map that was lost by gintersection. I also would have liked to be able to gain a more accurate sense of the time each route would take and the possible roadblocks that they would face. With this information we could have adjusted them more accordingly.  
