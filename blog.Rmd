@@ -5,7 +5,7 @@ date: "April 30, 2017"
 output: html_document
 ---
 
-```{r}
+```{r, message = FALSE}
 library(tidyverse)
 library(macleish)
 library(rvest)
@@ -13,58 +13,58 @@ library(rgdal)
 library(rgeos)
 ```
 
-```{r}
+```{r, message = FALSE}
 ##Getting trail data
 url1 <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/dcrtrails.html"
 download.file(url1, destfile = basename(url1))
 unzip("dcrtrails.zip", exdir = "dcrtrails")
 ```
 
-```{r}
+```{r, message = FALSE}
 trails <- path.expand("dcrtrails")
 #ogrListLayers(trails)
 ```
 
-```{r}
+```{r, message = FALSE}
 dcr_trails <- readOGR(trails, "DCR_ROADS_TRAILS_ARC")
 #summary(dcr_trails)
 ```
 
-```{r}
+```{r, message = FALSE}
 ##Getting college data
 url_colleges<- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/colleges.html"
 download.file(url_colleges, destfile = basename(url_colleges))
 unzip("colleges.zip", exdir = "colleges")
 ```
 
-```{r}
+```{r, message = FALSE}
 colleges <- path.expand("colleges")
 #ogrListLayers(colleges)
 ```
 
-```{r}
+```{r, message = FALSE}
 colleges_loc<- readOGR(colleges, "COLLEGES_PT")
 #summary(colleges_loc)
 ```
 
-```{r}
+```{r, message = FALSE}
 ##Getting contour data
 url_contour <- "http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/hp250k.html"
 download.file(url_contour, destfile = basename(url_contour))
 unzip("contours250k.zip", exdir = "contours")
 ```
 
-```{r}
+```{r, message = FALSE}
 contours <- path.expand("contours")
 #ogrListLayers(contours)
 ```
 
-```{r}
+```{r, message = FALSE}
 contour_mass<- readOGR(contours, "CONTOURS250K_ARC")
 #summary(contour_mass)
 ```
 
-```{r}
+```{r, message = FALSE}
 ##Transforming to coordinates that work in leaflet
 dcr_trails <- spTransform(dcr_trails, CRS("+init=epsg:4326"))
 contour_mass <- spTransform(contour_mass, CRS("+init=epsg:4326"))
@@ -72,18 +72,11 @@ colleges_loc <- spTransform(colleges_loc, CRS("+init=epsg:4326"))
 ```
 
 ```{r}
-##Demonstration
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%
-  addMarkers(data = colleges_loc)
+boundary <- spTransform(macleish_layers[["boundary"]], CRS("+init=epsg:4326"))
 ```
 
-```{r}
-boundary = spTransform(macleish_layers[["boundary"]], CRS("+init=epsg:4326"))
-```
-
-```{r}
+```{r, message = FALSE}
+# Making a boundary polygon to use to subset contour data
 library(sp)
 coords <- rbind(c(42.458299, -72.710239),
                 c(42.457476, -72.605017),
@@ -94,49 +87,23 @@ coords <- rbind(c(42.458299, -72.710239),
   rename(lat = V1, lon = V2)
 ```
 
-```{r}
+```{r, message = FALSE}
 polygon <- coords %>%
   select(lon,lat) %>%
   Polygon()
 ```
 
-```{r}
+```{r, message = FALSE}
 sp_polygon <- SpatialPolygons(list(Polygons(list(polygon), ID = "a")))
 ```
 
-```{r}
+```{r, message = FALSE}
 proj4string(sp_polygon) <- CRS("+init=epsg:4326")
 ```
 
-
 ```{r}
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%
-  addPolylines(data = sp_polygon)
-```
-
-```{r}
+# Subsetting contour data
 contours_relevant <- gIntersection(sp_polygon, contour_mass)
-```
-
-```{r}
-summary(contour_mass)
-```
-
-```{r}
-summary(contours_relevant)
-```
-
-```{r}
-library(leaflet)
-mac_pal <- colorBin(palette = "Reds", domain = boundary$Shape_Leng)
-leaflet() %>%
-  addTiles() %>%
-  addPolylines(data = trails_relevant) %>%
-  addPolylines(data = contours_relevant, weight = 1) %>%
-  addPolygons(data = boundary, color = ~mac_pal(Shape_Leng)) %>%
-  addMarkers(data = colleges_loc)
 ```
 
 
@@ -145,6 +112,7 @@ Plan:
 -find elevation data
 -pick easiest one and hardest one
 ```{r}
+# Creating a possible trail from Smith to Macleish
 trail1_df <- rbind(c(42.320327, -72.640085),
                    c(42.324335, -72.648490),
                    c(42.331041, -72.652168),
@@ -190,7 +158,7 @@ trail1_df <- rbind(c(42.320327, -72.640085),
 
 
 ```{r}
-# write function to convert df of coordinates to spatial lines df
+# Function to convert df of coordinates to spatial lines df
 df_to_sp <- function(trail_df) {
   trail_df %>%
     select(lon, lat) %>%
@@ -202,32 +170,22 @@ df_to_sp <- function(trail_df) {
 }
 ```
 
-
-
 ```{r}
 trail1_sp <- df_to_sp(trail1_df)
 ```
 
 ```{r}
+# Projecting trail 1
 proj4string(trail1_sp) <- CRS("+init=epsg:4326")
 ```
 
 ```{r}
-summary(trail1_sp)
-```
-
-```{r}
-leaflet() %>%
-  addTiles() %>%
-  addPolylines(data = trail1_sp)
-```
-
-```{r}
+# Finding where trail crosses contour lines
 trail1_elevation <- gIntersection(trail1_sp, contour_mass)
 ```
 
-##figure out how to retain elevation data from contour_mass
 ```{r}
+# Model for final map
 mac_pal <- colorBin(palette = "Reds", domain = boundary$Shape_Leng)
 
 leaflet() %>%
@@ -235,6 +193,6 @@ leaflet() %>%
   addCircleMarkers(data = trail1_elevation, radius = 4, stroke = FALSE, fillOpacity = 1) %>%
   addPolylines(data = trail1_sp, opacity = .5) %>%
   addPolylines(data = contours_relevant, weight = .5) %>%
-  addPolygons(data = boundary, color = ~mac_pal(Shape_Leng))
+  addPolygons(data = boundary, color = ~mac_pal(Shape_Leng), weight = 1.5, opacity = .8)
 ```
 
